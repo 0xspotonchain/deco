@@ -40,7 +40,7 @@
     </div>
     <div class="stats">
       <div class="stat"><strong>3</strong><span>testnets with deploys</span></div>
-      <div class="stat"><strong>1</strong><span>ERC-20 · DECO · 1,000,000 supply</span></div>
+      <div class="stat"><strong>2</strong><span>ERC-20 tokens · DECO + DM</span></div>
       <div class="stat"><strong>1</strong><span>NFT collection · DNFT #1</span></div>
       <div class="stat"><strong>0</strong><span>pools yet — coming soon</span></div>
       <div class="stat"><strong>2</strong><span>wallets</span></div>
@@ -60,7 +60,7 @@
   <section id="tokens">
     <p class="eyebrow">{tokens}</p>
     <h2>Tokens</h2>
-    <p class="section-intro">One token, three chains — the same contract address everywhere, deployed from the burner wallet. Tap any address to open it on the chain explorer, or copy it with the button.</p>
+    <p class="section-intro">Two tokens: DECO on three chains from the burner wallet, and DM on Arc from the Circle wallet. Tap any address to open it on the chain explorer, or copy it with the button.</p>
     <div class="card token-card">
       <div class="token-head">
         <img src="assets/deco-logo-256.png" alt="DECO logo" width="56" height="56">
@@ -86,6 +86,34 @@
         <li><a href="https://explorer.testnet.liteforge.zeeve.net/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">LitVM LiteForge ↗</a> <span class="muted">· chain 4441</span></li>
       </ul>
       <p class="pool-note"><strong>Pools: coming soon.</strong> No DECO pools exist yet — pool creation is paused. Nothing here claims a live pool.</p>
+      <p class="card-links">
+        <a href="https://raw.githubusercontent.com/0xspotonchain/deco-tokens/main/tokenlist.json" target="_blank" rel="noopener">Token list ↗</a>
+        <a href="https://github.com/0xspotonchain/deco-tokens" target="_blank" rel="noopener">Repo ↗</a>
+      </p>
+    </div>
+    <div class="card token-card">
+      <div class="token-head">
+        <img src="assets/dm-logo-256.png" alt="DM logo" width="56" height="56">
+        <div>
+          <h3>DM <span class="muted">DECO MUSE</span></h3>
+          <p class="muted">Circle wallet · Arc Testnet · mintable + burnable</p>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Standard</dt><dd>ERC-20</dd></div>
+        <div><dt>Supply</dt><dd>100T initial · mintable</dd></div>
+        <div><dt>Decimals</dt><dd>18</dd></div>
+        <div><dt>Chains</dt><dd>1 · Arc Testnet</dd></div>
+      </dl>
+      <p class="label">Token contract</p>
+      <p class="addr-row">
+        <a class="addr" href="https://explorer.testnet.arc.io/address/0x104a92386b4a7ddbfb35214b72ddbb8ed0134438" target="_blank" rel="noopener">0x104a92386b4a7ddbfb35214b72ddbb8ed0134438</a>
+        <button class="copy" data-copy="0x104a92386b4a7ddbfb35214b72ddbb8ed0134438" type="button">Copy</button>
+      </p>
+      <ul class="chain-links">
+        <li><a href="https://explorer.testnet.arc.io/address/0x104a92386b4a7ddbfb35214b72ddbb8ed0134438" target="_blank" rel="noopener">Arc Testnet ↗</a> <span class="muted">· chain 5042002</span></li>
+      </ul>
+      <p class="pool-note"><strong>Owner is the Circle wallet.</strong> Deployed with the Circle CLI from the agent wallet — the owner is passed as an explicit constructor argument because agent wallets deploy through a factory. Mint, burn and transfer all tested onchain.</p>
       <p class="card-links">
         <a href="https://raw.githubusercontent.com/0xspotonchain/deco-tokens/main/tokenlist.json" target="_blank" rel="noopener">Token list ↗</a>
         <a href="https://github.com/0xspotonchain/deco-tokens" target="_blank" rel="noopener">Repo ↗</a>
