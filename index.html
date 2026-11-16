@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DECO — deco + Muse</title>
+<meta name="description" content="DECO — deco + Muse. Tokens, sniper, wallets and bounties on testnets, for zero real money. DYOR, don't trust — verify, not your keys, not your coins.">
+<link rel="icon" href="assets/deco-logo-256.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#top">
+    <img src="assets/deco-logo-256.png" alt="DECO logo" width="32" height="32">
+    <span>DECO</span>
+  </a>
+  <nav class="nav">
+    <a href="#tokens">Tokens</a>
+    <a href="#nft">NFT</a>
+    <a href="#sniper">Sniper</a>
+    <a href="#wallets">Wallets</a>
+    <a href="#tools">Tools</a>
+    <a href="#chains">Chains</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-logo" src="assets/deco-logo.svg" alt="DECO — gold DC monogram" width="160" height="160">
+    <h1>DECO</h1>
+    <p class="tagline"><strong>deco + Muse</strong> — build on testnets for zero real money: tokens, sniper, wallets, bounties.</p>
+    <p class="motto">“DYOR, don't trust — verify, not your keys, not your coins.”</p>
+    <div class="hero-links">
+      <a class="btn gold" href="article.html">Read article →</a>
+      <a class="btn" href="https://github.com/0xspotonchain" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>3</strong><span>testnets with deploys</span></div>
+      <div class="stat"><strong>1</strong><span>ERC-20 · DECO · 1,000,000 supply</span></div>
+      <div class="stat"><strong>1</strong><span>NFT collection · DNFT #1</span></div>
+      <div class="stat"><strong>0</strong><span>pools yet — coming soon</span></div>
+      <div class="stat"><strong>2</strong><span>wallets</span></div>
+      <div class="stat"><strong>5</strong><span>project repos on GitHub</span></div>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="card article-card">
+    <p class="eyebrow">New article · Nov 2026 · Agent Games Creator Track</p>
+    <h2>Don't trust — verify: what my agent actually did, with receipts</h2>
+    <p>By deco — a Circle wallet on Arc, a multichain burner from one seed, 8/8 tests passed, faucet claims with hashes, and the failures reported as plainly as the wins. Every claim linked to its receipt.</p>
+    <p><a class="btn gold" href="article.html">Read article →</a></p>
+  </section>
+
+  <!-- TOKENS -->
+  <section id="tokens">
+    <h2>Tokens</h2>
+    <p class="section-intro">One token, three chains — the same contract address everywhere, deployed from the burner wallet. Tap any address to open it on the chain explorer, or copy it with the button.</p>
+    <div class="card token-card">
+      <div class="token-head">
+        <img src="assets/deco-logo-256.png" alt="DECO logo" width="56" height="56">
+        <div>
+          <h3>DECO <span class="muted">Deco Token</span></h3>
+          <p class="muted">Burner wallet · deployed on all three testnets</p>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Standard</dt><dd>ERC-20</dd></div>
+        <div><dt>Supply</dt><dd>1,000,000 (fixed)</dd></div>
+        <div><dt>Decimals</dt><dd>18</dd></div>
+        <div><dt>Chains</dt><dd>3</dd></div>
+      </dl>
+      <p class="label">Token contract (same on all three chains)</p>
+      <p class="addr-row">
+        <a class="addr" href="https://explorer.testnet.arc.io/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783</a>
+        <button class="copy" data-copy="0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" type="button">Copy</button>
+      </p>
+      <ul class="chain-links">
+        <li><a href="https://explorer.testnet.arc.io/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">Arc Testnet ↗</a> <span class="muted">· chain 5042002</span></li>
+        <li><a href="https://explorer.testnet.chain.robinhood.com/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">Robinhood Chain Testnet ↗</a> <span class="muted">· chain 46630</span></li>
+        <li><a href="https://explorer.testnet.liteforge.zeeve.net/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">LitVM LiteForge ↗</a> <span class="muted">· chain 4441</span></li>
+      </ul>
+      <p class="pool-note"><strong>Pools: coming soon.</strong> No DECO pools exist yet — pool creation is paused. Nothing here claims a live pool.</p>
+      <p class="card-links">
+        <a href="https://raw.githubusercontent.com/0xspotonchain/deco-tokens/main/tokenlist.json" target="_blank" rel="noopener">Token list ↗</a>
+        <a href="https://github.com/0xspotonchain/deco-tokens" target="_blank" rel="noopener">Repo ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- NFT -->
+  <section id="nft">
+    <h2>NFT</h2>
+    <p class="section-intro">One collection, one token per chain — token #1 minted to the burner on all three testnets. Metadata and artwork are stored fully onchain, no hosting.</p>
+    <div class="card nft-card">
+      <img class="nft-art" src="assets/nft-image.svg" alt="Deco NFT #1 artwork — DECO badge" width="512" height="512">
+      <div>
+        <h3>DNFT <span class="muted">Deco NFT · #1</span></h3>
+        <dl class="facts">
+          <div><dt>Standard</dt><dd>ERC-721</dd></div>
+          <div><dt>Tokens</dt><dd>#1 on 3 chains</dd></div>
+          <div><dt>Metadata</dt><dd>100% onchain (data URI)</dd></div>
+          <div><dt>Holder</dt><dd>Burner wallet</dd></div>
+        </dl>
+        <p class="label">NFT contract (same on all three chains)</p>
+        <p class="addr-row">
+          <a class="addr" href="https://explorer.testnet.arc.io/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">0xDf8A3BaAFffc5de3938bff1158584E841531BcbF</a>
+          <button class="copy" data-copy="0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" type="button">Copy</button>
+        </p>
+        <ul class="chain-links">
+          <li><a href="https://explorer.testnet.arc.io/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">Arc Testnet ↗</a></li>
+          <li><a href="https://explorer.testnet.chain.robinhood.com/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">Robinhood Chain Testnet ↗</a></li>
+          <li><a href="https://explorer.testnet.liteforge.zeeve.net/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">LitVM LiteForge ↗</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SNIPER -->
+  <section id="sniper">
+    <h2>Sniper</h2>
+    <p class="section-intro">A testnet-only buy/sell sniper for the burner wallet on Arc, Robinhood and LitVM. Dry-run by default — live mode needs explicit approval, every time.</p>
+    <div class="card">
+      <h3>DECO sniper bot</h3>
+      <dl class="facts">
+        <div><dt>Dry-run</dt><dd>31/31 checks PASS</dd></div>
+        <div><dt>Take profit</dt><dd>+100%</dd></div>
+        <div><dt>Stop loss</dt><dd>−50%</dd></div>
+        <div><dt>Time exit</dt><dd>1 hour</dd></div>
+        <div><dt>Spend caps</dt><dd>Per trade + per run</dd></div>
+        <div><dt>Guard</dt><dd>Testnet-only, hard-coded</dd></div>
+      </dl>
+      <p>Pair watcher (polling — public RPCs expose no mempool), target-token mode for DECO, TP / SL / time exits, and spend caps per trade and per run. Live trading needs <code>LIVE.enabled</code> plus <code>--live</code>; either one alone keeps it in dry-run.</p>
+      <p class="status-paused"><strong>Status: built + dry-run tested.</strong> The live pool + spam run is PAUSED by deco — no pool created, no liquidity, no trades. Resumes only on his say-so.</p>
+      <p class="card-links"><a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">Repo ↗</a></p>
+    </div>
+  </section>
+
+  <!-- WALLETS -->
+  <section id="wallets">
+    <h2>Wallets</h2>
+    <p class="section-intro">Two wallets run everything on this page. The Circle wallet is USDC on Arc only; the burner is the multichain workhorse — one BIP39 seed, one address per chain. Public addresses only; never a seed or a private key.</p>
+    <div class="card">
+      <h3>Circle Agent Wallet</h3>
+      <p class="muted">Arc testnet · USDC only · daily claims at 09:11 WIB</p>
+      <p class="label">Address</p>
+      <p class="addr-row">
+        <a class="addr" href="https://explorer.testnet.arc.io/address/0xc7d81269debced5e62069a4d42950965853aa300" target="_blank" rel="noopener">0xc7d81269debced5e62069a4d42950965853aa300</a>
+        <button class="copy" data-copy="0xc7d81269debced5e62069a4d42950965853aa300" type="button">Copy</button>
+      </p>
+    </div>
+    <div class="card">
+      <h3>Burner wallet</h3>
+      <p class="muted">One seed · one address per chain · deployer of DECO + DNFT</p>
+      <p class="label">EVM (all EVM chains)</p>
+      <p class="addr-row">
+        <a class="addr" href="https://explorer.testnet.arc.io/address/0xF1d949ed9B0b62508203AB0B91Bf01E73309Ad31" target="_blank" rel="noopener">0xF1d949ed9B0b62508203AB0B91Bf01E73309Ad31</a>
+        <button class="copy" data-copy="0xF1d949ed9B0b62508203AB0B91Bf01E73309Ad31" type="button">Copy</button>
+      </p>
+      <p class="label">Bitcoin SegWit</p>
+      <p class="addr-row">
+        <a class="addr" href="https://mempool.space/address/bc1q9473rsxyha0pl8w2sjcawy6ulyumpr4xch7822" target="_blank" rel="noopener">bc1q9473rsxyha0pl8w2sjcawy6ulyumpr4xch7822</a>
+        <button class="copy" data-copy="bc1q9473rsxyha0pl8w2sjcawy6ulyumpr4xch7822" type="button">Copy</button>
+      </p>
+      <p class="label">Bitcoin testnet4</p>
+      <p class="addr-row">
+        <a class="addr" href="https://mempool.space/testnet4/address/tb1qzk55m8k55e5p835y58qrlesw26z8j3ch4pkvxp" target="_blank" rel="noopener">tb1qzk55m8k55e5p835y58qrlesw26z8j3ch4pkvxp</a>
+        <button class="copy" data-copy="tb1qzk55m8k55e5p835y58qrlesw26z8j3ch4pkvxp" type="button">Copy</button>
+      </p>
+      <p class="label">Solana</p>
+      <p class="addr-row">
+        <a class="addr" href="https://explorer.solana.com/address/DcvJCguHLqQE52hpDvtoLG2wBNuK82tHCWpsgySRH6rL" target="_blank" rel="noopener">DcvJCguHLqQE52hpDvtoLG2wBNuK82tHCWpsgySRH6rL</a>
+        <button class="copy" data-copy="DcvJCguHLqQE52hpDvtoLG2wBNuK82tHCWpsgySRH6rL" type="button">Copy</button>
+      </p>
+      <p class="label">TRON</p>
+      <p class="addr-row">
+        <a class="addr" href="https://tronscan.org/#/address/TXPdam3wpEfcEGhmvkcpb5rRyeyTkRT46p" target="_blank" rel="noopener">TXPdam3wpEfcEGhmvkcpb5rRyeyTkRT46p</a>
+        <button class="copy" data-copy="TXPdam3wpEfcEGhmvkcpb5rRyeyTkRT46p" type="button">Copy</button>
+      </p>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools">
+    <h2>Tools &amp; builds</h2>
+    <p class="section-intro">Everything built so far, all open on GitHub. Free only, no KYC, no Discord — X, GitHub and Telegram only.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Token Launch Radar</h3>
+        <p>make.fun bounty entry — a static dashboard ranking pre-token protocols by what their launch would be worth, from a sealed DefiLlama snapshot. 178 rows, farm plans, model sandbox.</p>
+        <p class="card-links"><a href="https://github.com/0xspotonchain/token-launch-radar" target="_blank" rel="noopener">Repo ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Multichain burner wallet</h3>
+        <p>Generator + offline decryptor: one BIP39 seed for BTC, EVM, Solana and TRON, with an offline HTML decryptor and a faucet plan. 8/8 tests passed before it touched a faucet.</p>
+        <p class="card-links"><a href="https://github.com/0xspotonchain/deco-wallet" target="_blank" rel="noopener">Repo ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Circle Arc claim scripts</h3>
+        <p>Daily testnet USDC claims for the Circle agent wallet on Arc, with a self-healing CLI setup that survives VM resets.</p>
+        <p class="card-links"><a href="https://github.com/0xspotonchain/deco-circle-wallet" target="_blank" rel="noopener">Repo ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Agent Games article</h3>
+        <p>Creator Track entry for Agent Games by zkVerify, Nov 2026 — the build, the tests, the claims and the failures, with receipts.</p>
+        <p class="card-links"><a href="article.html">Read it →</a> <a href="https://agentgames.zkverify.io" target="_blank" rel="noopener">Contest ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Wallet Dashboard</h3>
+        <p>Read-only dashboard for both wallets — live balances from public RPCs, mainnet/testnet switch, unknown-token quarantine.</p>
+        <p class="muted">Runs on Muse's VM.</p>
+      </div>
+      <div class="card">
+        <h3>DECO tokens &amp; sniper</h3>
+        <p>The token contracts, deploy scripts and the sniper bot — see the Tokens, NFT and Sniper sections above.</p>
+        <p class="card-links"><a href="https://github.com/0xspotonchain" target="_blank" rel="noopener">All repos ↗</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAINS -->
+  <section id="chains">
+    <h2>Chains</h2>
+    <p class="section-intro">Where DECO is live today — three testnets with deploys, five more with faucet balances only, and mainnets not yet.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Arc Testnet</h3>
+        <p><span class="badge live">Live</span></p>
+        <p>Chain ID 5042002</p>
+        <p class="muted">DECO + DNFT deployed. Circle wallet claims USDC here daily.</p>
+        <p><a href="https://explorer.testnet.arc.io" target="_blank" rel="noopener">Explorer ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Robinhood Chain Testnet</h3>
+        <p><span class="badge live">Live</span></p>
+        <p>Chain ID 46630</p>
+        <p class="muted">DECO + DNFT deployed. Uniswap v4 stack live here.</p>
+        <p><a href="https://explorer.testnet.chain.robinhood.com" target="_blank" rel="noopener">Explorer ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>LitVM LiteForge</h3>
+        <p><span class="badge live">Live</span></p>
+        <p>Chain ID 4441 · Litecoin's EVM zk L2</p>
+        <p class="muted">DECO + DNFT deployed. Community V2 fork with 852 pairs.</p>
+        <p><a href="https://explorer.testnet.liteforge.zeeve.net" target="_blank" rel="noopener">Explorer ↗</a></p>
+      </div>
+    </div>
+    <h3 class="subhead">Faucet balances only</h3>
+    <ul class="chain-list">
+      <li><strong>Sepolia</strong> <span class="muted">· chain 11155111 · test USDC + EURC</span></li>
+      <li><strong>Base Sepolia</strong> <span class="muted">· chain 84532 · test USDC + EURC</span></li>
+      <li><strong>Arbitrum Sepolia</strong> <span class="muted">· chain 421614 · test USDC</span></li>
+      <li><strong>OP Sepolia</strong> <span class="muted">· chain 11155420 · test USDC</span></li>
+      <li><strong>Velana Testnet</strong> <span class="muted">· chain 484148 · 10 test VELA</span></li>
+    </ul>
+    <h3 class="subhead">Mainnets</h3>
+    <p><span class="badge soon">Not yet</span> <span class="muted">No mainnet deploys. Mainnet work needs deco's explicit go-ahead, every time.</span></p>
+  </section>
+
+  <!-- LINKS -->
+  <section id="links">
+    <h2>Links</h2>
+    <ul class="link-list">
+      <li><a href="https://github.com/0xspotonchain" target="_blank" rel="noopener">GitHub — 0xspotonchain ↗</a></li>
+      <li><a href="https://github.com/0xspotonchain/deco-tokens" target="_blank" rel="noopener">deco-tokens ↗</a></li>
+      <li><a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">deco-sniper ↗</a></li>
+      <li><a href="https://github.com/0xspotonchain/deco-wallet" target="_blank" rel="noopener">deco-wallet ↗</a></li>
+      <li><a href="https://github.com/0xspotonchain/deco-circle-wallet" target="_blank" rel="noopener">deco-circle-wallet ↗</a></li>
+      <li><a href="https://github.com/0xspotonchain/token-launch-radar" target="_blank" rel="noopener">token-launch-radar ↗</a></li>
+      <li><a href="https://raw.githubusercontent.com/0xspotonchain/deco-tokens/main/tokenlist.json" target="_blank" rel="noopener">DECO token list ↗</a></li>
+      <li><a href="https://agentgames.zkverify.io" target="_blank" rel="noopener">Agent Games by zkVerify ↗</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Built by <strong>deco + Muse</strong> · zero real money · testnets only · DYOR.</p>
+  <p class="muted">Public addresses only. Never a seed phrase, never a private key. Don't trust — verify.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

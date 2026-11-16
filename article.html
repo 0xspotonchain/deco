@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don't trust — verify: what my agent actually did, with receipts — DECO</title>
+<meta name="description" content="Agent Games by zkVerify, Creator Track, Season 01 — entry by deco. What my agent built, tested, claimed and failed at, with receipts.">
+<link rel="icon" href="assets/deco-logo-256.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/deco-logo-256.png" alt="DECO logo" width="32" height="32">
+    <span>DECO</span>
+  </a>
+  <nav class="nav">
+    <a href="index.html#tokens">Tokens</a>
+    <a href="index.html#nft">NFT</a>
+    <a href="index.html#sniper">Sniper</a>
+    <a href="index.html#wallets">Wallets</a>
+    <a href="index.html#tools">Tools</a>
+    <a href="index.html#chains">Chains</a>
+  </nav>
+</header>
+
+<main class="article">
+  <p class="eyebrow">Agent Games by zkVerify · Creator Track · Season 01</p>
+  <h1>Don't trust — verify: what my agent actually did, with receipts</h1>
+  <p class="byline">Entry by deco · Track: Creator Track · Season: 21 Oct – 21 Nov 2026 · Tags: #AgentGames @ZKVProtocol</p>
+
+  <p>My agent runs on a VM and moves money every morning — testnet money, but real transactions. This is what I built, what I tested, what landed, and what failed. All of it checked, none of it taken on faith.</p>
+
+  <blockquote>“DYOR, don't trust — verify, not your keys, not your coins.”</blockquote>
+
+  <h2>Why that motto is the whole point</h2>
+  <p>That line is not a slogan I put on a profile. It is the rule I run by. An agent that trades, signs and claims on your behalf is useful only if you do not have to take its word for anything. So when I set mine up, I built it the same way I would check anyone else's work: addresses you can look up, transaction hashes you can open, balances you can verify, and failures reported as plainly as successes.</p>
+  <p>Here is the build, in the order it happened.</p>
+
+  <h2>First: a Circle agent wallet on Arc testnet</h2>
+  <p>The first piece was a Circle agent wallet on Arc testnet — the wallet my agent uses for its daily claims.</p>
+  <p class="label">Wallet (Arc testnet)</p>
+  <p class="addr-row">
+    <a class="addr" href="https://explorer.testnet.arc.io/address/0xc7d81269debced5e62069a4d42950965853aa300" target="_blank" rel="noopener">0xc7d81269debced5e62069a4d42950965853aa300</a>
+    <button class="copy" data-copy="0xc7d81269debced5e62069a4d42950965853aa300" type="button">Copy</button>
+  </p>
+  <p>The first claim landed: 20 test USDC + 20 test EURC. Daily claims are scheduled for 09:11 WIB every morning. A second claim landed the next morning, taking the verified balance to 40 test USDC + 40 test EURC, checked at 09:18 WIB.</p>
+  <p>Testnet tokens, yes. But the transactions are real, the wallet is real, and anyone can check both. That is the standard everything else in this entry is held to.</p>
+
+  <h2>Then: one seed, five addresses</h2>
+  <p>Next I built a multichain burner wallet: one seed, five addresses — Bitcoin SegWit, Bitcoin testnet4, EVM, Solana, and TRON.</p>
+  <p>It uses standard BIP44 derivation paths, so one backup restores all of them, and the wallet imports into Trust Wallet, MetaMask, Phantom, and TronLink. One seed to protect, one backup to keep, five chains covered. A burner is meant to be simple and disposable — if the setup needs a spreadsheet to survive, it is already wrong.</p>
+
+  <h2>I didn't trust it — I tested it</h2>
+  <p>A new wallet that holds five chains is exactly the kind of thing you do not take on trust. So before it touched a single faucet, I tested it.</p>
+  <p><strong>8 out of 8 tests passed:</strong></p>
+  <ul>
+    <li>Sign-and-verify on EVM and Solana</li>
+    <li>Re-derivation checks on BTC and TRON</li>
+    <li>Decrypt round-trips on the encrypted backup</li>
+    <li>Every address live-checked on its explorer</li>
+  </ul>
+  <p>Balances were 0 across the board — exactly as expected for a fresh wallet, and exactly what the explorers showed. If a test had failed, the wallet would not have been used. Fail closed, fix it, test again.</p>
+
+  <h2>Then the faucets: what landed</h2>
+  <p>With the tests passed, the agent went claiming. Two claims landed, and both come with a hash you can check yourself:</p>
+  <table>
+    <thead>
+      <tr><th>Claim</th><th>Amount</th><th>Transaction hash</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>BTC testnet4</td>
+        <td>0.00001 tBTC</td>
+        <td class="hash"><a href="https://mempool.space/testnet4/tx/6b06c72ce045d1c9b9a1c3da02ce5745968e8d64b65f005543b2e15e3a7c9fd6" target="_blank" rel="noopener">6b06c72ce045d1c9b9a1c3da02ce5745968e8d64b65f005543b2e15e3a7c9fd6</a></td>
+      </tr>
+      <tr>
+        <td>TRON Nile</td>
+        <td>1,000 test TRX + 1,000 test USDT</td>
+        <td class="hash"><a href="https://nile.tronscan.org/#/transaction/62a338de3d2c2601a4f1ff495c9f44839f40d64e78e200df6e13b8869197be05" target="_blank" rel="noopener">62a338de3d2c2601a4f1ff495c9f44839f40d64e78e200df6e13b8869197be05</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Small amounts. That is not the point. The point is that “it landed” is not a claim I am asking you to believe — it is a hash you can paste into an explorer.</p>
+
+  <h2>What failed — and why that matters more</h2>
+  <p>Plenty did not land. I am putting the failures in the entry on purpose, because an agent report that only lists wins is marketing, not verification.</p>
+  <ul>
+    <li><strong>QuickNode:</strong> gated behind a mainnet balance, so it is unusable for a fresh burner wallet.</li>
+    <li><strong>pk910:</strong> blocked my VM's hosting IP range, so the proof-of-work faucet cannot be claimed from the VM.</li>
+    <li><strong>Solana public RPC airdrop:</strong> closed — it returns HTTP 410.</li>
+    <li><strong>Helius:</strong> its devnet faucet is paid-only, not free. I checked instead of assuming.</li>
+  </ul>
+  <p>Each failure has a specific, checked reason — not “it didn't work,” and not a quiet omission. When an agent hits a wall, the honest output is the wall, the reason, and what would have to change. Anything else teaches you to trust an agent that has not earned it.</p>
+
+  <h2>That's the point: proof, not a promise</h2>
+  <p>An agent that trades, signs and claims cannot just say it did the thing. A transaction hash, an explorer check, a daily balance verification — that is proof, not a promise.</p>
+  <p>That is why verifiable agents matter, and it is why my motto and this contest point in the same direction. Don't trust. Verify. Build the agent so that anyone — starting with you — can check its work without asking it nicely.</p>
+
+  <h2>Still open, and what comes next</h2>
+  <p>Two items are still open: Sepolia and Solana devnet. Both are blocked from the VM for the reasons above, so I will fund them from my own device instead of pretending the agent did it.</p>
+  <p>Next build: onchain sniper tools. Same rule applies there, only more so — the faster an agent moves, the more its work has to be checkable after the fact.</p>
+  <p>#AgentGames @ZKVProtocol</p>
+
+  <p><a class="back-link" href="index.html">← Back to DECO</a></p>
+</main>
+
+<footer>
+  <p>Built by <strong>deco + Muse</strong> · zero real money · testnets only · DYOR.</p>
+  <p class="muted">Public addresses only. Never a seed phrase, never a private key. Don't trust — verify.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* DECO — dark theme, gold branding. No external fonts or CDNs. */
+:root {
+  --bg: #0a0a0f;
+  --bg-soft: #12121a;
+  --card: #14141f;
+  --border: #262633;
+  --gold: #f5c518;
+  --gold-dim: #c9a227;
+  --text: #e8e8ee;
+  --muted: #9a9aad;
+  --green: #3ecf6f;
+  --amber: #f5a623;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--bg-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+h1, h2, h3 { line-height: 1.25; margin-top: 0; }
+h2 { font-size: 1.6rem; margin-bottom: 0.4rem; }
+h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+.muted { color: var(--muted); }
+.eyebrow {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+.section-intro { color: var(--muted); margin-top: 0; }
+
+/* Top bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  background: rgba(10, 10, 15, 0.92);
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.brand img { border-radius: 8px; }
+.nav { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+.nav a { color: var(--muted); font-size: 0.9rem; }
+.nav a:hover { color: var(--gold); }
+
+/* Layout */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+section { margin-top: 3rem; }
+
+/* Hero */
+.hero { text-align: center; padding: 3rem 0 1rem; }
+.hero-logo { border-radius: 24px; }
+.hero h1 {
+  font-size: 3.2rem;
+  letter-spacing: 0.18em;
+  margin: 1rem 0 0.5rem;
+  color: var(--gold);
+}
+.tagline { font-size: 1.15rem; max-width: 640px; margin: 0 auto; }
+.motto { color: var(--muted); font-style: italic; margin: 1rem auto 0; max-width: 640px; }
+.hero-links { margin-top: 1.5rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.btn:hover { text-decoration: none; border-color: var(--gold); }
+.btn.gold { background: var(--gold); border-color: var(--gold); color: #0a0a0f; }
+.btn.gold:hover { background: #ffd83d; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 2.5rem auto 0;
+  max-width: 720px;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 0.75rem;
+}
+.stat strong { display: block; font-size: 1.9rem; color: var(--gold); line-height: 1.1; }
+.stat span { color: var(--muted); font-size: 0.85rem; }
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+.card h3 { margin-bottom: 0.25rem; }
+.article-card { border-color: var(--gold-dim); }
+.grid { display: grid; gap: 1rem; }
+
+/* Facts table */
+.facts { display: grid; gap: 0.5rem; margin: 1rem 0; }
+.facts > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; text-align: right; font-weight: 600; }
+
+/* Addresses */
+.label { color: var(--muted); font-size: 0.85rem; margin: 1rem 0 0.25rem; font-weight: 600; }
+.addr-row { display: flex; gap: 0.5rem; align-items: flex-start; margin: 0 0 0.5rem; }
+.addr {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  word-break: break-all;
+  color: var(--gold);
+  flex: 1;
+  min-width: 0;
+}
+.copy {
+  flex-shrink: 0;
+  background: var(--bg-soft);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.copy:hover { border-color: var(--gold); }
+.copy.copied { background: var(--gold); color: #0a0a0f; border-color: var(--gold); }
+
+/* Token / NFT */
+.token-head { display: flex; gap: 1rem; align-items: center; }
+.token-head img { border-radius: 12px; }
+.chain-links { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.35rem; }
+.card-links { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0 0; }
+.pool-note {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0 0;
+}
+.status-paused {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+.nft-art {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+}
+.badge.live { background: rgba(62, 207, 111, 0.15); color: var(--green); border: 1px solid var(--green); }
+.badge.soon { background: rgba(245, 166, 35, 0.12); color: var(--amber); border: 1px solid var(--amber); }
+
+.subhead { margin-top: 2rem; }
+.chain-list { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
+.chain-list li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+}
+.link-list { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
+.link-list a { font-weight: 600; }
+
+/* Article page */
+.article { max-width: 720px; }
+.article h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.article .byline { color: var(--muted); margin-top: 0; }
+.article blockquote {
+  border-left: 3px solid var(--gold);
+  margin: 1.5rem 0;
+  padding: 0.25rem 1rem;
+  font-style: italic;
+  color: var(--gold);
+}
+.article table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+.article th, .article td { text-align: left; padding: 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.article th { color: var(--muted); }
+.article .hash { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8rem; word-break: break-all; }
+.back-link { display: inline-block; margin: 2rem 0 0; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted);
+}
+footer p { margin: 0.25rem 0; }
+
+/* Wider screens */
+@media (min-width: 640px) {
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .facts { grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem; }
+  .nft-card { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .nft-art { flex-shrink: 0; margin-bottom: 0; }
+  .hero h1 { font-size: 4rem; }
+}
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
