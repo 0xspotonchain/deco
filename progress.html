@@ -36,12 +36,12 @@
     <h1>Progress</h1>
     <p class="tagline">Every workstream, its status, and its next step — one page, updated with the work. Nothing here is marked done until it is verified on-chain or live.</p>
     <p class="motto">“From zero to hero” — everything built from $0 real money.</p>
-    <p class="muted">Last updated: Mon Nov 16, 2026, 19:08 GMT+7.</p>
+    <p class="muted">Last updated: Mon Nov 16, 2026, 19:55 GMT+7.</p>
     <div class="stats">
       <div class="stat"><strong>41</strong><span>items tracked</span></div>
-      <div class="stat"><strong>20</strong><span>done</span></div>
-      <div class="stat"><strong>6</strong><span>in progress</span></div>
-      <div class="stat"><strong>4</strong><span>blocked</span></div>
+      <div class="stat"><strong>23</strong><span>done</span></div>
+      <div class="stat"><strong>4</strong><span>in progress</span></div>
+      <div class="stat"><strong>3</strong><span>blocked</span></div>
       <div class="stat"><strong>11</strong><span>todo</span></div>
     </div>
   </section>
@@ -74,15 +74,15 @@
         <div><dt>Base Sepolia</dt><dd>160 USDC + 160 EURC</dd></div>
         <div><dt>Arbitrum Sepolia</dt><dd>160 USDC</dd></div>
         <div><dt>OP Sepolia</dt><dd>160 USDC</dd></div>
-        <div><dt>Robinhood</dt><dd>0.005103 test ETH</dd></div>
+        <div><dt>Robinhood</dt><dd>0.015091 test ETH</dd></div>
         <div><dt>LitVM</dt><dd>0.047225 zkLTC</dd></div>
-        <div><dt>Velana</dt><dd>8.498517 VELA</dd></div>
+        <div><dt>Velana</dt><dd>5.648441 VELA</dd></div>
         <div><dt>Solana devnet</dt><dd>0.025 SOL · mainnet 0</dd></div>
         <div><dt>TRON Nile</dt><dd>2,000 TRX + 2,000 test USDT</dd></div>
         <div><dt>BTC testnet4</dt><dd>2,000 sats · mainnet 0</dd></div>
         <div><dt>DECO</dt><dd>990,000 Arc · 920,070 RH (+70,000 in v4) · 990,000 LitVM · 990,000 Velana</dd></div>
       </dl>
-      <p class="muted">Two checks failed at 18:30 — Bitcoin mainnet timed out and the LitVM check dropped — so those two are last known, not fresh reads. Robinhood was 0.005091 test ETH after the v4 trades (checked 18:51 GMT+7); LitVM was 0.047225 zkLTC (checked 19:04 GMT+7). The burner also holds 1,500 DM on Arc. The TRON account holds 1 "tenergy.dev" spam token — never interact with unknown tokens.</p>
+      <p class="muted">Two checks failed at 18:30 — Bitcoin mainnet timed out and the LitVM check dropped — so those two are last known, not fresh reads. Robinhood was 0.005091 test ETH after the v4 trades (checked 18:51 GMT+7), then 0.015091 after the official stock-token distribution (checked 19:51 GMT+7 — the faucet bot sent 5 each of TSLA, AMZN, PLTR, NFLX, AMD test tokens + 0.01 test ETH; testnet tokens, no real value); LitVM was 0.047225 zkLTC (checked 19:04 GMT+7); Velana was 5.648441 VELA after the points sweep (checked 19:55 GMT+7 — the sweep spent 2.85 VELA). The burner also holds 1,500 DM on Arc and 100T DM on Velana (launched in the points sweep). The TRON account holds 1 "tenergy.dev" spam token — never interact with unknown tokens.</p>
     </div>
   </section>
 
@@ -90,7 +90,7 @@
   <section id="tokens">
     <p class="eyebrow">{tokens}</p>
     <h2>Tokens</h2>
-    <p class="section-intro">Three tokens, all deployed and verified on-chain. Last updated Nov 16, 19:00 GMT+7 (deco-tokens repo updated with pools + name service).</p>
+    <p class="section-intro">Four tokens, all deployed and verified on-chain. Last updated Nov 16, 19:55 GMT+7 (Velana DM launched in the points sweep).</p>
     <div class="card">
       <div class="table-wrap">
         <table class="vol-table prog-table">
@@ -100,7 +100,7 @@
           <tbody>
             <tr><td>DECO (ERC-20)</td><td><span class="badge live">Done</span></td><td>Nov 16, 04:12</td><td>1,000,000 fixed supply on Arc, Robinhood, LitVM + Velana. Same address on the first three; Velana differs. <a href="index.html#tokens">Token card →</a></td></tr>
             <tr><td>DNFT #1 (ERC-721)</td><td><span class="badge live">Done</span></td><td>Nov 16, 04:16</td><td>Token #1 minted to the burner on all 4 chains. Metadata + SVG artwork fully on-chain, no hosting. <a href="index.html#nft">NFT card →</a></td></tr>
-            <tr><td>DM — DECO MUSE (ERC-20)</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:08</td><td>100T initial supply on Arc, owned by the Circle wallet. Mintable + burnable; mint, transfer and burn all tested on-chain, non-owner mint reverts. <a href="https://explorer.testnet.arc.io/address/0x104a92386b4a7ddbfb35214b72ddbb8ed0134438" target="_blank" rel="noopener">Contract ↗</a></td></tr>
+            <tr><td>DM — DECO MUSE (ERC-20)</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:08</td><td>100T initial supply on Arc, owned by the Circle wallet. Mintable + burnable; mint, transfer and burn all tested on-chain, non-owner mint reverts. A second DM ("Deco Muse", 100T, 100% to the burner) was also launched on Velana via the token launcher — see <a href="#velana">Velana</a>. <a href="https://explorer.testnet.arc.io/address/0x104a92386b4a7ddbfb35214b72ddbb8ed0134438" target="_blank" rel="noopener">Arc contract ↗</a> <a href="https://velanachain.com/explorer/#/address/0xcA5987dACb20D79a420A844181A07cc94A94Ef36" target="_blank" rel="noopener">Velana contract ↗</a></td></tr>
             <tr><td>Token list + logos</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:47</td><td>Uniswap-format token list v1.0.1 (DECO + DM) and the gold DC / DM logos, on GitHub. <a href="https://raw.githubusercontent.com/0xspotonchain/deco-tokens/main/tokenlist.json" target="_blank" rel="noopener">Token list ↗</a></td></tr>
           </tbody>
         </table>
@@ -112,7 +112,7 @@
   <section id="pools">
     <p class="eyebrow">{pools &amp; names}</p>
     <h2>Pools + name service</h2>
-    <p class="section-intro">Five pools live, three names resolving to the burner. Reserves checked on-chain Nov 16, 18:49 GMT+7. Last updated Nov 16, 19:00 GMT+7.</p>
+    <p class="section-intro">Five pools live, three names resolving to the burner. Reserves checked on-chain Nov 16, 19:55 GMT+7 (Velana re-checked; other chains unchanged since 18:49). Last updated Nov 16, 19:55 GMT+7.</p>
     <div class="card">
       <div class="table-wrap">
         <table class="vol-table prog-table">
@@ -120,7 +120,7 @@
             <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
           </thead>
           <tbody>
-            <tr><td>4 SimpleAMM pools</td><td><span class="badge live">Done</span></td><td>Nov 16, 14:15</td><td>Own constant-product pools (0.3% fee, no remove-liquidity), one per chain, seeded 10,000 DECO + base each. Reserves verified 18:49 GMT+7. <a href="index.html#pools">Pools →</a></td></tr>
+            <tr><td>4 SimpleAMM pools</td><td><span class="badge live">Done</span></td><td>Nov 16, 14:15</td><td>Own constant-product pools (0.3% fee, no remove-liquidity), one per chain, seeded 10,000 DECO + base each. Reserves verified 19:55 GMT+7 (Velana 10,000 DECO / 0.0015586 VELA after the first run). <a href="index.html#pools">Pools →</a></td></tr>
             <tr><td>Uniswap v4 pool (Robinhood)</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:28</td><td>Real v4 DECO/ETH pool, fee 3000, full-range. Seeded 0.0021 ETH + 70,000 DECO; position NFT #1070742 held by the burner. <a href="https://explorer.testnet.chain.robinhood.com/tx/0x86b457ccdf5388df76e8de479715f6b11cc4ebcd2852260ba1e379e49aff7955" target="_blank" rel="noopener">Initialize tx ↗</a></td></tr>
             <tr><td>Name service + 12 soulbound NFTs</td><td><span class="badge live">Done</span></td><td>Nov 16, 14:15</td><td>deco (#1), muse (#2), 0xspotonchain (#3) all resolve to the burner on all 4 chains. Transfers and approvals revert — proven on-chain. <a href="index.html#names">Name service →</a></td></tr>
           </tbody>
@@ -134,7 +134,7 @@
   <section id="sniper">
     <p class="eyebrow">{sniper}</p>
     <h2>Sniper</h2>
-    <p class="section-intro">Testnet-only, dry-run by default. First run complete on 3 chains; Velana still running. Last updated Nov 16, 18:51 GMT+7.</p>
+    <p class="section-intro">Testnet-only, dry-run by default. First run complete on all 4 chains — 4,000 rounds, 8,007 txs. Last updated Nov 16, 19:55 GMT+7.</p>
     <div class="card">
       <div class="table-wrap">
         <table class="vol-table prog-table">
@@ -143,10 +143,10 @@
           </thead>
           <tbody>
             <tr><td>Sniper bot</td><td><span class="badge live">Done</span></td><td>Nov 16</td><td>Dry-run 31/31 PASS. TP +100% / SL −50% / 1h time exit, spend caps, hard testnet-only guard. Live needs <code>LIVE.enabled</code> + <code>--live</code>. <a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">Repo ↗</a></td></tr>
-            <tr><td>First volume run — 3 chains</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:51</td><td>1,000/1,000 rounds each, 6,007 txs total. Arc 2,000 txs (4.253 USDC gas) · Robinhood 2,002 (0.001156 ETH) · LitVM 2,005 (0.0011619 zkLTC). All balances verified on-chain. <a href="https://github.com/0xspotonchain/deco-sniper/blob/main/VOLUMES.md" target="_blank" rel="noopener">Full record ↗</a></td></tr>
+            <tr><td>First volume run — 4 chains</td><td><span class="badge live">Done</span></td><td>Nov 16, 19:44</td><td>1,000/1,000 rounds each, 8,007 txs total. Arc 2,000 txs (4.253 USDC gas) · Robinhood 2,002 (0.001156 ETH) · LitVM 2,005 (0.0011619 zkLTC) · Velana 2,000 (gas ~0 at 7 wei). All balances verified on-chain. <a href="https://github.com/0xspotonchain/deco-sniper/blob/main/VOLUMES.md" target="_blank" rel="noopener">Full record ↗</a></td></tr>
             <tr><td>V4 live trades</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:51</td><td>Position-mode sniper did 2 full buy→sell cycles on the real v4 pool — 4 txs confirmed, net cost 0.0000125 ETH, burner DECO exactly unchanged. <a href="index.html#sniper">Trade links →</a></td></tr>
-            <tr><td>Velana volume run</td><td><span class="badge progress">In progress</span></td><td>Nov 16, 18:34</td><td>522/819 rounds, 1,045 txs. Stalled 18:34 GMT+7 when the Velana RPC returned 502 mid-round — the agent is resuming it. No orphan: burner + pool reconcile to exactly 1,000,000 DECO.</td></tr>
-            <tr><td>Daily volume cron</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>100 rounds/chain/day from Tue Nov 17, 11:11 GMT+7 (Arc, Robinhood, LitVM; Velana joins once its build lands). First run pending.</td></tr>
+            <tr><td>Velana volume run</td><td><span class="badge live">Done</span></td><td>Nov 16, 19:44</td><td>1,000/1,000 rounds, 2,000 txs, 0 failed. Four parts (181 + 490 + 33 + 296) across 2 VM reboots + 1 RPC-502 crash; every interruption reconciled exactly. Bought 0.1 / sold 0.0994447 VELA, gas ~0 (7 wei). Burner DECO 990,000 unchanged. <a href="https://velanachain.com/explorer/#/tx/0xe9ab414ad7ed8f7f73b2275fe29650d7bf29986630618b95a7b9f8aaa0243405" target="_blank" rel="noopener">First tx ↗</a> <a href="https://velanachain.com/explorer/#/tx/0xb5375c0a37a26ebf538c701de4ab73cf2b23afc06bee9080478510473959c3bb" target="_blank" rel="noopener">Last tx ↗</a></td></tr>
+            <tr><td>Daily volume cron</td><td><span class="badge soon">Todo</span></td><td>Nov 16, 19:55</td><td>100 rounds/chain/day from Tue Nov 17, 11:11 GMT+7 (Arc, Robinhood, LitVM, Velana — 4 chains, 800 txs/day; cron extended Nov 16). First run pending.</td></tr>
           </tbody>
         </table>
       </div>
@@ -157,7 +157,7 @@
   <section id="velana">
     <p class="eyebrow">{velana}</p>
     <h2>Velana</h2>
-    <p class="section-intro">Velana Testnet (chain 484148) — land, Testnet Points, token launcher, Vel Pay, and the free store + site builders. Rank #1 on the points leaderboard. Last updated Nov 16, 18:51 GMT+7.</p>
+    <p class="section-intro">Velana Testnet (chain 484148) — land, Testnet Points, token launcher, Vel Pay, and the free store + site builders. 250 points, rank #1 of 23 on the points leaderboard (9/10 tasks; #2 has 35). Last updated Nov 16, 19:55 GMT+7.</p>
     <div class="card">
       <div class="table-wrap">
         <table class="vol-table prog-table">
@@ -167,8 +167,8 @@
           <tbody>
             <tr><td>Faucet + land plot #0</td><td><span class="badge live">Done</span></td><td>Nov 16, 14:15</td><td>10 test VELA claimed; plot #0 (row 0, col 0) claimed for 1.5 VELA (1.0 locked + 0.5 fee). Plot is unnamed so far. <a href="https://velanachain.com/explorer/#/tx/0x04882a2a395a0a4c4c459d3cbd08729436b0c530582bacbb201e17d47ba1caea" target="_blank" rel="noopener">Claim tx ↗</a></td></tr>
             <tr><td>Builder store + site</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:06</td><td>"DECO Test Store" and "DECO" site live on the Velana builder; Vel Pay wallet set to the burner. The two tasks flipped the burner to rank #1. <a href="https://velanachain.com/builder/s/decoteststore" target="_blank" rel="noopener">Store ↗</a> <a href="https://velanachain.com/builder/s/deco" target="_blank" rel="noopener">Site ↗</a></td></tr>
-            <tr><td>Points sweep</td><td><span class="badge progress">In progress</span></td><td>Nov 16, 18:19</td><td>85 points, rank #1 of 23, 4/10 tasks done. Remaining: token launch +40, buy land +30, Vel Pay payment +25, sell land +30, rent out +30. Ordered by deco — the agent runs them after the volume run finishes (same burner nonce).</td></tr>
-            <tr><td>Build + furnishing</td><td><span class="badge blocked">Blocked</span></td><td>Nov 16, 18:19</td><td>Cheapest build (Kiosk) costs 10 tVELA; the burner holds ~8.5. Unblocks after the Tue Nov 17 faucet claim (~11:52 GMT+7, daily cron 12:05). Worth +30 build points plus up to +40 furnishing bonus.</td></tr>
+            <tr><td>Points sweep</td><td><span class="badge live">Done</span></td><td>Nov 16, 19:50</td><td>250 points, rank #1 of 23, 9/10 tasks done. DM "Deco Muse" launched (100T, 100% to burner); plot 2722 bought @ 1.5 VELA; Vel Pay request paid (0.1 tVELA, burner as merchant + payer); Luxury Kiosk built on plot #0. Sell land +30 and rent out +30 need counterparties — plot 2722 listed @ 1.0 VELA, plot #0 listed @ 0.05 VELA/day. Max solo total is 250/310. <a href="https://velanachain.com/explorer/#/tx/0x825567bad73d1d5bea6a70b174c2f7d63347046293b5df617e27cb22ea51e642" target="_blank" rel="noopener">Launch tx ↗</a></td></tr>
+            <tr><td>Build + furnishing</td><td><span class="badge live">Done</span></td><td>Nov 16, 19:50</td><td>Luxury Kiosk (tier 4, max) built on plot #0 for 1.25 VELA — +30 build, +40 furnishing. Correction: the Kiosk costs 0.5 VELA base / 1.25 Luxury, not 10 tVELA as first believed, so no faucet wait was needed. Build is via LandMarket.build(). <a href="https://velanachain.com/explorer/#/tx/0x085f4ca5e992c58c2ecb0a03fc8ab68587828d3d58141b01ddc2d73f049e09a3" target="_blank" rel="noopener">Build tx ↗</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -294,7 +294,7 @@
   <section id="milestones">
     <p class="eyebrow">{milestones}</p>
     <h2>Milestones</h2>
-    <p class="section-intro">What's coming, in order. All times GMT+7 unless marked UTC. Last updated Nov 16, 19:08 GMT+7.</p>
+    <p class="section-intro">What's coming, in order. All times GMT+7 unless marked UTC. Last updated Nov 16, 19:55 GMT+7.</p>
     <ul class="chain-list">
       <li><strong>Tue Nov 17, 01:00</strong> <span class="muted">· make.fun bring-the-humans-01 ends ($1,000)</span></li>
       <li><strong>Tue Nov 17, 03:30</strong> <span class="muted">· make.fun markdown-render-speed-02 ends ($250)</span></li>
@@ -304,7 +304,7 @@
       <li><strong>Tue Nov 17, 10:11</strong> <span class="muted">· Burner daily claims — BTC, Robinhood, LitVM, TRON Nile + Solana devnet join</span></li>
       <li><strong>Tue Nov 17, 10:30</strong> <span class="muted">· make.fun free-model-aggregator-02 ends ($500)</span></li>
       <li><strong>Tue Nov 17, 11:11</strong> <span class="muted">· First daily sniper volume run — 100 rounds/chain/day</span></li>
-      <li><strong>Tue Nov 17, 12:05</strong> <span class="muted">· Velana daily faucet — unblocks build + furnishing (10 tVELA Kiosk)</span></li>
+      <li><strong>Tue Nov 17, 12:05</strong> <span class="muted">· Velana daily faucet — tops the burner back up (10 test VELA/day)</span></li>
       <li><strong>Tue Nov 17, 17:00</strong> <span class="muted">· Sepolia faucet retry — pk910 first, then testnet.help</span></li>
       <li><strong>Wed Nov 19, 01:00</strong> <span class="muted">· make.fun best-game-01 ends ($1,000) · VOICE Express ends</span></li>
       <li><strong>Fri Nov 21, 13:30</strong> <span class="muted">· make.fun github-core-clone-01 ends ($500)</span></li>
