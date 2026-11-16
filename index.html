@@ -45,8 +45,8 @@
       <div class="stat"><strong>4</strong><span>testnets with deploys</span></div>
       <div class="stat"><strong>2</strong><span>ERC-20 tokens · DECO + DM</span></div>
       <div class="stat"><strong>1</strong><span>NFT collection · DNFT #1</span></div>
-      <div class="stat"><strong>5</strong><span>pools live · 4 SimpleAMM + 1 Uniswap v4</span></div>
-      <div class="stat"><strong>8,007</strong><span>volume txs · Nov 16 first run</span></div>
+      <div class="stat"><strong>6</strong><span>pools live · 5 SimpleAMM + 1 Uniswap v4</span></div>
+      <div class="stat"><strong>8,208</strong><span>volume txs · Nov 16 first runs</span></div>
       <div class="stat"><strong>2</strong><span>wallets</span></div>
       <div class="stat"><strong>5</strong><span>project repos on GitHub</span></div>
     </div>
@@ -130,16 +130,16 @@
   <section id="nft">
     <p class="eyebrow">{nft}</p>
     <h2>NFT</h2>
-    <p class="section-intro">One collection, one token per chain — token #1 minted to the burner on all four testnets. Metadata and artwork are stored fully onchain, no hosting.</p>
+    <p class="section-intro">One collection, one token per chain — token #1 minted to the burner on all four testnets, plus #2 on Arc, minted by the Circle wallet itself. Metadata and artwork are stored fully onchain, no hosting.</p>
     <div class="card nft-card">
       <img class="nft-art" src="assets/nft-image.svg" alt="Deco NFT #1 artwork — DECO badge" width="512" height="512">
       <div>
-        <h3>DNFT <span class="muted">Deco NFT · #1</span></h3>
+        <h3>DNFT <span class="muted">Deco NFT · #1 + #2</span></h3>
         <dl class="facts">
           <div><dt>Standard</dt><dd>ERC-721</dd></div>
-          <div><dt>Tokens</dt><dd>#1 on 4 chains</dd></div>
+          <div><dt>Tokens</dt><dd>#1 on 4 chains + #2 on Arc</dd></div>
           <div><dt>Metadata</dt><dd>100% onchain (data URI)</dd></div>
-          <div><dt>Holder</dt><dd>Burner wallet</dd></div>
+          <div><dt>Holder</dt><dd>Burner wallet · #2 held by the Circle wallet</dd></div>
         </dl>
         <p class="label">NFT contract (same on Arc, Robinhood, LitVM — Velana differs)</p>
         <p class="addr-row">
@@ -160,7 +160,7 @@
   <section id="pools">
     <p class="eyebrow">{pools}</p>
     <h2>Pools</h2>
-    <p class="section-intro">Five live pools. Four are deco's own SimpleAMM pools (constant-product, 0.3% fee, no remove-liquidity — the seed stays locked), one per chain, each seeded 10,000 DECO + base. The fifth is a real Uniswap v4 pool on Robinhood. Reserves checked on-chain 18:49 GMT+7, Nov 16, 2026.</p>
+    <p class="section-intro">Six live pools. Five are deco's own SimpleAMM pools (constant-product, 0.3% fee, no remove-liquidity — the seed stays locked): one DECO pool per chain, each seeded 10,000 DECO + base, plus a DM/USDC pool for the Circle wallet on Arc. The sixth is a real Uniswap v4 pool on Robinhood. Burner-pool reserves checked on-chain 18:49 GMT+7, Nov 16, 2026; Circle pool reserves 23:10 GMT+7.</p>
     <div class="grid">
       <div class="card">
         <h3>Arc · DECO / USDC</h3>
@@ -175,6 +175,21 @@
           <button class="copy" data-copy="0x3137C615F3f3B1e7C8F75390F8ccb128f4D11A3A" type="button">Copy</button>
         </p>
         <p class="card-links"><a href="https://explorer.testnet.arc.io/tx/0xc9ad165f28491f4bed2e22044d63e9b29b352e6a8c79eb6e8f183210745a56eb" target="_blank" rel="noopener">First volume tx ↗</a> <a href="https://explorer.testnet.arc.io/tx/0x7b118c50eb8b3132b80192212df0575a9558ee5e66c6f1e7a94897e8c6f833d2" target="_blank" rel="noopener">Last volume tx ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Arc · DM / USDC (Circle)</h3>
+        <p><span class="badge live">Live</span> <span class="muted">SimpleAMM · chain 5042002 · Circle wallet</span></p>
+        <dl class="facts">
+          <div><dt>Seed</dt><dd>10,000 DM + 10 USDC</dd></div>
+          <div><dt>Reserves now</dt><dd>10,098.3629 DM / 9.962521 USDC</dd></div>
+          <div><dt>Volume</dt><dd>100/100 rounds · 201 txs</dd></div>
+        </dl>
+        <p class="label">Pool</p>
+        <p class="addr-row">
+          <a class="addr" href="https://explorer.testnet.arc.io/address/0x53661d12527e02019d991d2f24bf4b6661a96ba7" target="_blank" rel="noopener">0x53661d12527e02019d991d2f24bf4b6661a96ba7</a>
+          <button class="copy" data-copy="0x53661d12527e02019d991d2f24bf4b6661a96ba7" type="button">Copy</button>
+        </p>
+        <p class="card-links"><a href="https://explorer.testnet.arc.io/tx/0x324ffce25b9fefaa8078fd75e133f5bb635a99fbb346af6a2859a554c85dcf92" target="_blank" rel="noopener">First volume tx ↗</a> <a href="https://explorer.testnet.arc.io/tx/0x988cb369022d1698ee0386d5ae08ac9e3f73297b139024aa919b9eee99b7c982" target="_blank" rel="noopener">Last volume tx ↗</a></p>
       </div>
       <div class="card">
         <h3>Robinhood · DECO / ETH</h3>
@@ -240,14 +255,15 @@
   <section id="names">
     <p class="eyebrow">{names}</p>
     <h2>Name service</h2>
-    <p class="section-intro">Own ENS-style registry — three names, all resolving to the burner wallet, on all four chains. Each name has a soulbound NFT: minting only, transfers and approvals always revert (proven on-chain on every chain). 12 name NFTs in total.</p>
+    <p class="section-intro">Own ENS-style registry — three names resolving to the burner wallet on all four chains, plus "circle" resolving to the Circle wallet on Arc. Each name has a soulbound NFT: minting only, transfers and approvals always revert (proven on-chain on every chain). 13 name NFTs in total.</p>
     <div class="card">
       <h3>DecoNameService</h3>
       <dl class="facts">
         <div><dt>deco</dt><dd>#1 → burner</dd></div>
         <div><dt>muse</dt><dd>#2 → burner</dd></div>
         <div><dt>0xspotonchain</dt><dd>#3 → burner</dd></div>
-        <div><dt>Name NFTs</dt><dd>12 soulbound (3 per chain)</dd></div>
+        <div><dt>circle</dt><dd>#4 → Circle wallet (Arc)</dd></div>
+        <div><dt>Name NFTs</dt><dd>13 soulbound (3 per chain + #4 Circle on Arc)</dd></div>
       </dl>
       <p class="label">Registry (Arc, Robinhood, LitVM)</p>
       <p class="addr-row">
@@ -290,7 +306,7 @@
         <div><dt>Guard</dt><dd>Testnet-only, hard-coded</dd></div>
       </dl>
       <p>Pair watcher (polling — public RPCs expose no mempool), target-token mode for DECO, TP / SL / time exits, and spend caps per trade and per run. Live trading needs <code>LIVE.enabled</code> plus <code>--live</code>; either one alone keeps it in dry-run.</p>
-      <p class="status-live"><strong>Status: LIVE — first run complete on all 4 chains.</strong> 1,000/1,000 rounds each on Arc, Robinhood, LitVM and Velana — 4,000 rounds, 8,007 txs, all verified on-chain. From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7.</p>
+      <p class="status-live"><strong>Status: LIVE — first run complete on all 4 chains.</strong> 1,000/1,000 rounds each on Arc, Robinhood, LitVM and Velana — 4,000 rounds, 8,007 txs, all verified on-chain — plus the Circle wallet's own DM/USDC run on Arc (100/100 rounds, 201 txs). From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7.</p>
       <p class="pool-note"><strong>Uniswap v4: traded live.</strong> The position-mode sniper did 2 full buy→sell cycles on the real Robinhood v4 DECO/ETH pool (4 txs confirmed, total net cost 0.0000125 ETH, burner DECO exactly unchanged). First cycle: <a href="https://explorer.testnet.chain.robinhood.com/tx/0xbb654db544b24de3b10d8ff945ce3332c6d59fdf3925b3be9d4ffb1b464b55ab" target="_blank" rel="noopener">buy ↗</a> / <a href="https://explorer.testnet.chain.robinhood.com/tx/0x0ca08b1c3670c3dc3dd9fec3c572f4fc7cd5d97e1c89acb7d07550570dca1d5f" target="_blank" rel="noopener">sell ↗</a>. Second cycle: <a href="https://explorer.testnet.chain.robinhood.com/tx/0x832bbf505ed31a3ada31b2d45e7e0c23a5db69f7d71aea9867efb1040791aa9c" target="_blank" rel="noopener">buy ↗</a> / <a href="https://explorer.testnet.chain.robinhood.com/tx/0x538a71fade7bca1a6c835df1a9c3ba2ebe2aac7d74ae9033a8b9819418d95ddd" target="_blank" rel="noopener">sell ↗</a>. Two v4 gotchas fixed along the way: the docs-listed Quoter isn't a Quoter on this testnet (manual StateView quote instead), and the router reverts on empty hookData (swaps encode <code>0x00</code>).</p>
       <p class="card-links"><a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">Repo ↗</a> <a href="#volumes">Daily volumes ↓</a></p>
     </div>
@@ -300,7 +316,7 @@
   <section id="volumes">
     <p class="eyebrow">{daily volumes}</p>
     <h2>Daily volumes</h2>
-    <p class="section-intro">Buy-then-sell-back rounds against the own SimpleAMM pools — one round = 1 buy + 1 sell (2 txs). First run, Nov 16, 2026. As of 19:55 GMT+7 — all four chains complete: 4,000 rounds, 8,007 txs.</p>
+    <p class="section-intro">Buy-then-sell-back rounds against the own SimpleAMM pools — one round = 1 buy + 1 sell (2 txs). First run, Nov 16, 2026. As of 23:10 GMT+7 — all four burner chains complete plus the Circle wallet's DM/USDC run: 4,100 rounds, 8,208 txs.</p>
     <div class="card">
       <div class="table-wrap">
         <table class="vol-table">
@@ -312,11 +328,12 @@
             <tr><td>Robinhood</td><td>1,000 / 1,000</td><td>2,002</td><td>0.1001 ETH</td><td>0.0995441 ETH</td><td>0.001156 ETH</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.chain.robinhood.com/tx/0xf9276b50c9bdb40ae84262d7b0364272093c23bb17f67719f066a8d9e0c735d5" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.chain.robinhood.com/tx/0x143cfd95553953fa70771ac9a5720858a72af4ae768c3355551982b1e96b7f0c" target="_blank" rel="noopener">Last ↗</a></td></tr>
             <tr><td>LitVM</td><td>1,000 / 1,000</td><td>2,005</td><td>0.1001 zkLTC</td><td>0.099669 zkLTC</td><td>0.0011619 zkLTC</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.liteforge.zeeve.net/tx/0x174263fc3bc07320211f8a45f9b408c2d847bbced0a644a50e0f927c3acbeffb" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.liteforge.zeeve.net/tx/0xe1eb3cb4d7466fa22b7fa1307add70efe96811ddbc27b7de228db95c55dd9c0a" target="_blank" rel="noopener">Last ↗</a></td></tr>
             <tr><td>Velana</td><td>1,000 / 1,000</td><td>2,000</td><td>0.1 VELA</td><td>0.0994447 VELA</td><td>~0.00000000081 VELA</td><td><span class="badge live">Complete</span></td><td><a href="https://velanachain.com/explorer/#/tx/0xe9ab414ad7ed8f7f73b2275fe29650d7bf29986630618b95a7b9f8aaa0243405" target="_blank" rel="noopener">First ↗</a> <a href="https://velanachain.com/explorer/#/tx/0xb5375c0a37a26ebf538c701de4ab73cf2b23afc06bee9080478510473959c3bb" target="_blank" rel="noopener">Last ↗</a></td></tr>
-            <tr><td><strong>Total</strong></td><td><strong>4,000 / 4,000</strong></td><td><strong>8,007</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>Arc (Circle)</td><td>100 / 100</td><td>201</td><td>10.0 USDC</td><td>10.038073 USDC</td><td>0 (not deducted)</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.arc.io/tx/0x324ffce25b9fefaa8078fd75e133f5bb635a99fbb346af6a2859a554c85dcf92" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.arc.io/tx/0x988cb369022d1698ee0386d5ae08ac9e3f73297b139024aa919b9eee99b7c982" target="_blank" rel="noopener">Last ↗</a></td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>4,100 / 4,100</strong></td><td><strong>8,208</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="muted">Velana ran in 4 parts (181 + 490 + 33 + 296) across 2 VM reboots and 1 RPC-502 crash — every interruption reconciled exactly on-chain, 0 failed rounds. From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7 (800 txs/day across 4 chains).</p>
+      <p class="muted">Velana ran in 4 parts (181 + 490 + 33 + 296) across 2 VM reboots and 1 RPC-502 crash — every interruption reconciled exactly on-chain, 0 failed rounds. The Circle run survived a VM reboot mid-round-8 (buy landed, sell never ran — reconciled exactly, sold back, resumed at round 9) and a round-61 double-sell (the CLI reported a landed sell as failed and the recovery sold the same DM twice — both sells verified via Swap events; net +0.038073 USDC). From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7 (800 txs/day across 4 chains).</p>
       <p class="card-links"><a href="https://github.com/0xspotonchain/deco-sniper/blob/main/VOLUMES.md" target="_blank" rel="noopener">Full volumes record ↗</a></p>
     </div>
   </section>
@@ -329,6 +346,7 @@
     <div class="card">
       <h3>Circle Agent Wallet</h3>
       <p class="muted">Arc testnet · USDC only · daily claims at 09:11 GMT+7</p>
+      <p class="muted">Own stack on Arc: DM/USDC pool, DNFT #2, name "circle" + soulbound DNAME #4.</p>
       <p class="label">Address</p>
       <p class="addr-row">
         <a class="addr" href="https://explorer.testnet.arc.io/address/0xc7d81269debced5e62069a4d42950965853aa300" target="_blank" rel="noopener">0xc7d81269debced5e62069a4d42950965853aa300</a>
