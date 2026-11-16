@@ -43,6 +43,128 @@
     <div class="grid">
 
       <div class="card">
+        <p><span class="badge live">Verified · offline only</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>iancoleman.io — BIP39 Mnemonic Code Converter</h3>
+        <p>The gold-standard BIP39 reference, already one of our sources: client-side, open-source (MIT), repo since 2014 (~4.2k stars), converts mnemonics to seeds, BIP32 root keys and derived addresses across BIP32/44/49/84/141. Coinomi's official docs recommend it for key recovery. The rule stands: real seeds go in OFFLINE only — download bip39-standalone.html from the GitHub releases, go airplane mode, then open it. Never paste a seed into the live site, and never use iancoleman.net — a third-party lookalike, not official.</p>
+        <p class="card-links">Sources: <a href="https://iancoleman.io/bip39/" target="_blank" rel="noopener">iancoleman.io/bip39 ↗</a> <a href="https://github.com/iancoleman/bip39" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://github.com/iancoleman/bip39/releases/latest/" target="_blank" rel="noopener">Offline release ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · caution</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>brainwalletx.github.io — Brainwallet tool</h3>
+        <p>A legit fork of the classic brainwallet.org tool (the community moved here after security flaws were found in the original) — client-side JS that turns a passphrase into a BTC key via plain SHA-256, plus a tx builder and sign/verify-message tools. Source: github.com/brainwalletX/brainwalletX.github.io (MIT). Safe uses only: verifying signed messages (public data) and recovering an old legacy brainwallet, offline, from the downloaded source. Brainwallets as storage are broken — no key-stretching, so any human passphrase is brute-forceable and bots sweep them (DEFCON 23). Never fund one, never paste a funded key into the live site.</p>
+        <p class="card-links">Sources: <a href="https://brainwalletx.github.io/" target="_blank" rel="noopener">brainwalletx.github.io ↗</a> <a href="https://github.com/brainwalletX/brainwalletX.github.io" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://bitcointalk.org/index.php?topic=5293070.msg55823890" target="_blank" rel="noopener">bitcointalk ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · avoid</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>privatekeys.pw — "Private Keys Database"</h3>
+        <p>A directory that generates "every" BTC/ETH private key on the fly from the page number (2^256 keys — mathematically you will never find a funded one by browsing), with balance checks, a brainwallet collection, and a mnemonic converter. Trust checkers disagree wildly (ScamMinder 10/100, Scam Detector 40.4/100, EvenInsight 90/100) and there is no team or repo to hold accountable. The danger is structural: its key search and mnemonic converter invite you to paste a private key or seed into a live third-party site. Never paste real key material into it — or any site like it. Nothing here that we need.</p>
+        <p class="card-links">Sources: <a href="https://privatekeys.pw/" target="_blank" rel="noopener">privatekeys.pw ↗</a> <a href="https://scamminder.com/website/privatekeys.pw" target="_blank" rel="noopener">ScamMinder ↗</a> <a href="https://www.scam-detector.com/validator/privatekeys-pw-review/" target="_blank" rel="noopener">Scam Detector ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · read-only only</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>bitaps.com — Bitcoin explorer + API</h3>
+        <p>A long-running Bitcoin block explorer (live since ~2015) with a REST ledger API, mainnet + testnet explorers, mempool/fee stats and miner stats — still listed in 2026 explorer roundups. Useful only as a read-only backup explorer for public addresses, a second viewpoint to cross-check a tx. Honest caveat: we could not get a fresh copy of the homepage today (last fetchable copy was 836 days old), so check its block height against mempool.space before trusting it. Skip its key/mnemonic/tx-signing tools entirely, and never use its coin mixer.</p>
+        <p class="card-links">Sources: <a href="https://bitaps.com/" target="_blank" rel="noopener">bitaps.com ↗</a> <a href="https://coinpedia.org/crypto-wallet/bitaps/" target="_blank" rel="noopener">Coinpedia ↗</a> <a href="https://cryptoadventure.com/best-bitcoin-block-explorers-in-2026-track-btc-transactions-fees-and-mempool-data/" target="_blank" rel="noopener">2026 explorer roundup ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · skip</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>bitamp.com — Bitamp Bitcoin web wallet</h3>
+        <p>A legit open-source, client-side, non-custodial BTC web wallet (launched May 2020, no registration, no KYC, Tor onion available): keys derived and txs signed in the browser, supports legacy, nested and native SegWit addresses, accepts seeds from Ledger/Trezor/Electrum/Mycelium. But its core flow is pasting your seed into a live web page — which breaks our rule — the repo (40 commits, 29 stars, front-end only) looked abandoned to bitcointalk users in mid-2025, an Oct 2025 "GitHub update" claim comes only from a syndicated PR blast, and phishing clones exist. We already have better tooling (VM keystore + DECO Wallet app), so: skip.</p>
+        <p class="card-links">Sources: <a href="https://bitamp.com/" target="_blank" rel="noopener">bitamp.com ↗</a> <a href="https://github.com/bitampcom/bitamp" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://bitcointalk.org/index.php?topic=5546013.0;prev_next=next" target="_blank" rel="noopener">bitcointalk ↗</a></p>
+      </div>
+      <div class="card">
+        <p><span class="badge live">Verified · USE</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>Uniswap — app.uniswap.org</h3>
+        <p>The largest DEX (AMM v2/v3/v4 plus MEV-protected, gasless UniswapX), zero interface fees since Dec 2025, on 21 mainnets including Arc (5042) and Robinhood Chain (4663) plus Solana. It is already the swap engine inside the DECO Wallet app, and the only venue in this set with a usable testnet in the web app (Sepolia — free practice). DECO/DM can't trade here (testnet tokens; Uniswap's Arc/Robinhood deployments are mainnet-only). Watch for fake UNI airdrops and clones like uni-swap-app.com.</p>
+        <p><strong>Steps:</strong> fresh wallet (never the burner) → type app.uniswap.org manually, bookmark it → connect → pick network → paste verified contract addresses → prefer UniswapX routes → Sepolia for practice.</p>
+        <p class="card-links">Sources: <a href="https://uniswap.org/" target="_blank" rel="noopener">uniswap.org ↗</a> <a href="https://developers.uniswap.org/docs/trading/swapping-api/supported-chains#uniswapx-chain-support" target="_blank" rel="noopener">Supported chains ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge live">Verified · USE</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>1inch — app.1inch.io</h3>
+        <p>DEX aggregator routing across 200+ liquidity sources with gasless, MEV-protected Fusion swaps, Fusion+ cross-chain (incl. Solana), limit orders, and a real Android wallet app. Launch partner on Robinhood Chain with RWA/stock-token swaps; Arc support added Sep 2026. Mainnet-only — no testnet at all, so every swap is real money. Heavy phishing: 133 impersonating hostnames (1ihch.us, dapp-1inch.com, 1inch-login.com). May 2026 Fusion v2 exploit (~$15M, funds returned) is on the record.</p>
+        <p><strong>Steps:</strong> install "1inch: DeFi Crypto Wallet" (publisher Degensoft Ltd) or type app.1inch.io in Chrome → fresh wallet → Fusion mode → review quote → sign.</p>
+        <p class="card-links">Sources: <a href="https://app.1inch.io/" target="_blank" rel="noopener">app.1inch.io ↗</a> <a href="https://1inch.com/blog/post/bring-rwa-swaps-to-your-app" target="_blank" rel="noopener">RWA swaps ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · WATCH</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>Sushi — sushi.com</h3>
+        <p>Multi-chain DEX on 40+ chains (v2/v3, cross-chain SushiXSwap, Sushi Launch token tool on Robinhood Chain). Real Robinhood Chain presence ($3.3M v3 TVL, ~$148M 30-day volume) but liquidity has drifted to Uniswap, pools are often thin, no Arc deployment, no testnet. Phishing is the worst of the set (275 impersonating hostnames, incl. Angel Drainer "sushistakes.*" fakes). April 2023 RouteProcessor2 hack ($3.3M, recovered).</p>
+        <p><strong>Steps:</strong> fresh wallet → type sushi.com manually → check pool depth and price impact before swapping → conservative slippage.</p>
+        <p class="card-links">Sources: <a href="https://sushi.com/" target="_blank" rel="noopener">sushi.com ↗</a> <a href="https://coingecko.com/coins/sushi" target="_blank" rel="noopener">CoinGecko ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · WATCH</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>KyberSwap — kyberswap.com</h3>
+        <p>DEX aggregator across 650+ liquidity sources on 27+ chains, zero platform fee, limit orders, stop-market orders, cross-chain swaps, honeypot detection. The only aggregator in this set covering Arc mainnet (Meta Aggregation Router V2) and Robinhood Chain mainnet, plus every EVM mainnet deco uses. Mainnet-only — nothing to do until mainnet is funded. Nov 2023 Elastic exploit (~$48.8M; aggregator untouched). Aggressive phishing: kyberwsap.cc once ranked #1 on Bing with a drainer.</p>
+        <p><strong>Steps:</strong> fresh wallet → type kyberswap.com manually (never a search ad) → fund gas (USDC on Arc) → connect → verify contract addresses → review route.</p>
+        <p class="card-links">Sources: <a href="https://kyberswap.com/about/kyberswap" target="_blank" rel="noopener">kyberswap.com ↗</a> <a href="https://docs.kyberswap.com/" target="_blank" rel="noopener">Docs ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · WATCH</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>PancakeSwap — pancakeswap.finance</h3>
+        <p>The biggest AMM on BNB Chain (V2 0.25%, V3 0.01–1%, Infinity hook pools, Smart Router, limit orders) across 11 chains incl. Solana, Robinhood Chain and Arc. It fills the one mainnet gap in the DECO Wallet app — BNB Chain swaps. Testnet router contracts exist (Sepolia, Arbitrum Sepolia, Base Sepolia, BSC testnet) but no public testnet UI is confirmed. BNB Chain has the worst fake-token/honeypot and sandwich-bot problem of any venue here. No official mobile app — any store app is fake.</p>
+        <p><strong>Steps:</strong> fresh wallet → fund BNB for gas → type pancakeswap.finance manually → paste verified contract addresses from BscScan → tight slippage.</p>
+        <p class="card-links">Sources: <a href="https://developer.pancakeswap.finance/contracts/universal-router/addresses" target="_blank" rel="noopener">Dev docs ↗</a> <a href="https://en.wikipedia.org/wiki/PancakeSwap" target="_blank" rel="noopener">Wikipedia ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge blocked">Verified · SKIP</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>QuickSwap — dapp.quickswap.exchange</h3>
+        <p>Polygon-native AMM (V2 0.3%, V3 dynamic fees, farming, Dragon's Lair staking) on Polygon and Base. Solid and no core exploit on record — but both chains are already covered by Uniswap V3 in the DECO Wallet app with deeper liquidity, and there is no testnet, no Arc/Robinhood/BNB/Solana, and Polygon activity is declining. Nothing here he doesn't already have. Watch for the documented phishing clone connect-layer3[.]com.</p>
+        <p><strong>Steps:</strong> none needed — skip it. (If ever used: fresh wallet, POL for gas, type dapp.quickswap.exchange manually.)</p>
+        <p class="card-links">Sources: <a href="https://dapp.quickswap.exchange/" target="_blank" rel="noopener">dapp.quickswap.exchange ↗</a> <a href="https://docs.quickswap.exchange/" target="_blank" rel="noopener">Docs ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · WATCH</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>Matcha — matcha.xyz</h3>
+        <p>DEX aggregator built by 0x Labs, routing across 100+ liquidity sources and 9M+ tokens on 16–17 EVM mainnets, with swaps, limit orders, cross-chain trades and a gasless MEV-protected Auto mode. Mainnet-only, no testnets, and largely redundant with the Uniswap V3 swaps already in the wallet app. The "zero fee" headline is misleading — the help centre documents 0.25% on most pairs plus surplus capture. Lookalike matcha-dex.xyz is not official.</p>
+        <p><strong>Steps:</strong> fresh wallet → type matcha.xyz manually → connect via WalletConnect → toggle Matcha Auto on for MEV protection → check the fee shown before confirming.</p>
+        <p class="card-links">Sources: <a href="https://matcha.xyz/" target="_blank" rel="noopener">matcha.xyz ↗</a> <a href="https://www.coingecko.com/en/exchanges/matcha-optimism" target="_blank" rel="noopener">CoinGecko ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge live">Verified · USE — with care</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>Jupiter — jup.ag</h3>
+        <p>Solana's dominant DEX aggregator (~95% aggregator share) — swaps, limit orders, DCA, perps, Lend, prediction markets, portfolio tracker — plus an official Android app (Jupiter Mobile by Raccoon Labs). It fills the one gap in the DECO Wallet app: no Solana swap yet. No protocol fee on basic swaps (pool fees 0.25–0.3% apply). Active phishing: fake "Jupuary" claim pages and fake $CJUP dust tokens that drain wallets. JUP mint: JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN.</p>
+        <p><strong>Steps:</strong> Google Play → "Jupiter Mobile – Solana Wallet" (publisher Raccoon Labs, NOT the Indian banking app) → create a fresh wallet → fund a little SOL → Swap tab. Or type jup.ag in Chrome with a fresh Phantom/Solflare wallet.</p>
+        <p class="card-links">Sources: <a href="https://jup.ag/" target="_blank" rel="noopener">jup.ag ↗</a> <a href="https://docs.jup.ag/" target="_blank" rel="noopener">Docs ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Verified · WATCH</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>Raydium — raydium.io</h3>
+        <p>Solana's largest-TVL AMM (~$1.8B) with AMM v4, CPMM and CLMM pools, farms, staking, and the LaunchLab token launchpad (~0.03 SOL deploy). About 60% of Jupiter's volume routes through Raydium pools, so deco already gets its liquidity through Jupiter — direct use only matters for providing liquidity or launching a Solana token via LaunchLab (mainnet, real money). Swap fee 0.25%. Docs state raydium.io is the only domain — raydiumdex.cc is a scam. Support is on Discord, outside deco's platform rule.</p>
+        <p><strong>Steps:</strong> type raydium.io manually → connect a fresh Phantom/Solflare wallet → verify every mint on Solscan → check pool TVL and price impact. LaunchLab only with real-money go-ahead.</p>
+        <p class="card-links">Sources: <a href="https://raydium.io/" target="_blank" rel="noopener">raydium.io ↗</a> <a href="https://docs.raydium.io/introduction/what-is-raydium" target="_blank" rel="noopener">Docs ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge live">Verified · USE</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>GeckoTerminal — geckoterminal.com</h3>
+        <p>CoinGecko's DEX tracker (analytics only — no trading), covering 224 networks and ~2,037 DEXes, free with no account or wallet. The strongest screener for deco: the only one indexing a testnet he uses (Sepolia — a live Uniswap V3 Sepolia pool page was opened), confirmed Arc and Robinhood Chain mainnet coverage, a Stock Pairs APR Tracker for Robinhood stock pools, and a GT Security Score (0–100) that checks honeypots, mint/freeze authority, LP locks and holder concentration. Listing is automatic and unmoderated — listing ≠ legitimacy. No token exists; anyone selling one is a scammer.</p>
+        <p><strong>Steps:</strong> install "GeckoTerminal: DEX Tracker" by CoinGecko (or type geckoterminal.com in Chrome) → no account, no wallet → pick a chain → search by contract address → read the GT Security Score before believing anything.</p>
+        <p class="card-links">Sources: <a href="https://www.geckoterminal.com/about-us" target="_blank" rel="noopener">geckoterminal.com ↗</a> <a href="https://support.coingecko.com/articles/4321639679-what-is-geckoterminal" target="_blank" rel="noopener">CoinGecko KB ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge live">Verified · USE — strict rules</span> <span class="muted">· Nov 16, 2026</span></p>
+        <h3>DexScreener — dexscreener.com</h3>
+        <p>The fastest free chart for almost any mainnet pool — pairs appear within minutes of their first trade — across 64 chains, and the only screener here confirmed to cover TRON mainnet, plus Robinhood Chain (Arc likely, verify live). Analytics only, no trading, no account, no wallet. Strict rules: Trending is pay-to-play (Boosts $99–$3,999 tilt the score — treat it as an ads board), it has no safety score at all (always cross-check on GeckoTerminal), listing is automatic and unmoderated, and phishing clones are severe (dexscreener.co.com flagged critical phishing). No token exists.</p>
+        <p><strong>Steps:</strong> install "DEX Screener" by DEX Screener, Inc. (or type dexscreener.com in Chrome) → never connect a wallet → search by contract address → filter by min liquidity/age → cross-check on GeckoTerminal.</p>
+        <p class="card-links">Sources: <a href="https://dexscreener.com/" target="_blank" rel="noopener">dexscreener.com ↗</a> <a href="https://docs.dexscreener.com/" target="_blank" rel="noopener">Docs ↗</a></p>
+      </div>
+
+      <div class="card">
         <p><span class="badge live">Verified · source</span> <span class="muted">· Nov 16, 2026</span></p>
         <h3>@airdropfind — Telegram channel</h3>
         <p>The Telegram channel behind many of the leads on this page — Agent Games, the make.fun radar, the CoW bounty, Bitcoin Hyper, Velana and more all surfaced there first. We read it every hour and verify every item against official sources before acting: referral links stripped, unverified claims skipped, paid/KYC/Discord-gated items flagged. The channel is public and readable without login.</p>
