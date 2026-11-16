@@ -238,6 +238,13 @@ section { margin-top: 3rem; }
 .badge.live { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
 .badge.soon { background: var(--amber-bg); color: var(--orange-dark); border: 1px solid var(--orange); }
 .badge.progress { background: var(--sky-light); color: var(--navy-soft); border: 1px solid var(--sky); }
+.badge.blocked { background: #fdecea; color: #b3261e; border: 1px solid #b3261e; }
+
+/* Progress tracker tables — notes wrap, status + updated stay on one line */
+.prog-table { min-width: 480px; }
+.vol-table.prog-table td, .vol-table.prog-table th { white-space: normal; }
+.vol-table.prog-table td:nth-child(2), .vol-table.prog-table td:nth-child(3) { white-space: nowrap; }
+.vol-table.prog-table td:first-child { font-weight: 600; }
 .status-live {
   background: var(--green-bg);
   border: 1px solid var(--border);

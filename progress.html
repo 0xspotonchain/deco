@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progress — DECO</title>
+<meta name="description" content="DECO progress tracker — every workstream, its status, and its next step. Wallets, tokens, pools, sniper, Velana, bounties, faucets. DYOR, don't trust — verify.">
+<link rel="icon" href="assets/deco-logo-256.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/deco-logo-256.png" alt="DECO logo" width="32" height="32">
+    <span>DECO</span>
+  </a>
+  <nav class="nav">
+    <a href="index.html#tokens">Tokens</a>
+    <a href="index.html#nft">NFT</a>
+    <a href="index.html#pools">Pools</a>
+    <a href="index.html#sniper">Sniper</a>
+    <a href="index.html#volumes">Volumes</a>
+    <a href="index.html#wallets">Wallets</a>
+    <a href="index.html#tools">Tools</a>
+    <a href="index.html#chains">Chains</a>
+    <a href="dyor.html">DYOR</a>
+    <a href="faucets.html">Faucets</a>
+    <a href="progress.html">Progress</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">{progress tracker}</p>
+    <h1>Progress</h1>
+    <p class="tagline">Every workstream, its status, and its next step — one page, updated with the work. Nothing here is marked done until it is verified on-chain or live.</p>
+    <p class="motto">“From zero to hero” — everything built from $0 real money.</p>
+    <p class="muted">Last updated: Mon Nov 16, 2026, 19:08 GMT+7.</p>
+    <div class="stats">
+      <div class="stat"><strong>41</strong><span>items tracked</span></div>
+      <div class="stat"><strong>20</strong><span>done</span></div>
+      <div class="stat"><strong>6</strong><span>in progress</span></div>
+      <div class="stat"><strong>4</strong><span>blocked</span></div>
+      <div class="stat"><strong>11</strong><span>todo</span></div>
+    </div>
+  </section>
+
+  <!-- WALLETS -->
+  <section id="wallets">
+    <p class="eyebrow">{wallets}</p>
+    <h2>Wallets</h2>
+    <p class="section-intro">Two wallets run everything. The Circle wallet is USDC on Arc only; the burner is the multichain workhorse. Balances are the hourly snapshot from Nov 16, 18:30 GMT+7 unless a newer check is noted. Public addresses only; never a seed or a private key.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Circle testnet wallet</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:30</td><td>Live on Arc testnet. 80 test USDC + 60 test EURC + 99,999,999,999,400 DM + 10 BZND (unknown — do not interact). Claims USDC only, daily 09:11 GMT+7. Session valid to ~Dec 12, 2026. <a href="https://explorer.testnet.arc.io/address/0xc7d81269debced5e62069a4d42950965853aa300" target="_blank" rel="noopener">Address ↗</a></td></tr>
+            <tr><td>Circle mainnet login</td><td><span class="badge live">Done</span></td><td>Nov 16, 17:18</td><td>Logged in with deco's OTP. Session valid to ~Dec 14, 2026. Wallet <code>0xe7ad575b529ba58ad811fe02df67aaa44dc42f44</code>. <a href="https://github.com/0xspotonchain/deco-circle-wallet" target="_blank" rel="noopener">Repo ↗</a></td></tr>
+            <tr><td>Circle mainnet funding</td><td><span class="badge blocked">Blocked</span></td><td>Nov 16, 17:18</td><td>Balance 0 USDC — unfunded. Needs real USDC plus deco's explicit go-ahead. Nothing funded yet.</td></tr>
+            <tr><td>Burner wallet</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:30</td><td>One BIP39 seed, five addresses, 8/8 tests passed before it touched a faucet. Encrypted backups delivered to deco. His import confirmation is still open — see <a href="#your-steps">Deco's steps</a>. <a href="wallet.html">How it was built →</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Burner balances — snapshot Nov 16, 18:30 GMT+7</h3>
+      <dl class="facts">
+        <div><dt>Arc</dt><dd>144.835596 USDC + 160 EURC</dd></div>
+        <div><dt>Sepolia</dt><dd>0 ETH · 160 USDC + 160 EURC</dd></div>
+        <div><dt>Base Sepolia</dt><dd>160 USDC + 160 EURC</dd></div>
+        <div><dt>Arbitrum Sepolia</dt><dd>160 USDC</dd></div>
+        <div><dt>OP Sepolia</dt><dd>160 USDC</dd></div>
+        <div><dt>Robinhood</dt><dd>0.005103 test ETH</dd></div>
+        <div><dt>LitVM</dt><dd>0.047225 zkLTC</dd></div>
+        <div><dt>Velana</dt><dd>8.498517 VELA</dd></div>
+        <div><dt>Solana devnet</dt><dd>0.025 SOL · mainnet 0</dd></div>
+        <div><dt>TRON Nile</dt><dd>2,000 TRX + 2,000 test USDT</dd></div>
+        <div><dt>BTC testnet4</dt><dd>2,000 sats · mainnet 0</dd></div>
+        <div><dt>DECO</dt><dd>990,000 Arc · 920,070 RH (+70,000 in v4) · 990,000 LitVM · 990,000 Velana</dd></div>
+      </dl>
+      <p class="muted">Two checks failed at 18:30 — Bitcoin mainnet timed out and the LitVM check dropped — so those two are last known, not fresh reads. Robinhood was 0.005091 test ETH after the v4 trades (checked 18:51 GMT+7); LitVM was 0.047225 zkLTC (checked 19:04 GMT+7). The burner also holds 1,500 DM on Arc. The TRON account holds 1 "tenergy.dev" spam token — never interact with unknown tokens.</p>
+    </div>
+  </section>
+
+  <!-- TOKENS -->
+  <section id="tokens">
+    <p class="eyebrow">{tokens}</p>
+    <h2>Tokens</h2>
+    <p class="section-intro">Three tokens, all deployed and verified on-chain. Last updated Nov 16, 19:00 GMT+7 (deco-tokens repo updated with pools + name service).</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>DECO (ERC-20)</td><td><span class="badge live">Done</span></td><td>Nov 16, 04:12</td><td>1,000,000 fixed supply on Arc, Robinhood, LitVM + Velana. Same address on the first three; Velana differs. <a href="index.html#tokens">Token card →</a></td></tr>
+            <tr><td>DNFT #1 (ERC-721)</td><td><span class="badge live">Done</span></td><td>Nov 16, 04:16</td><td>Token #1 minted to the burner on all 4 chains. Metadata + SVG artwork fully on-chain, no hosting. <a href="index.html#nft">NFT card →</a></td></tr>
+            <tr><td>DM — DECO MUSE (ERC-20)</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:08</td><td>100T initial supply on Arc, owned by the Circle wallet. Mintable + burnable; mint, transfer and burn all tested on-chain, non-owner mint reverts. <a href="https://explorer.testnet.arc.io/address/0x104a92386b4a7ddbfb35214b72ddbb8ed0134438" target="_blank" rel="noopener">Contract ↗</a></td></tr>
+            <tr><td>Token list + logos</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:47</td><td>Uniswap-format token list v1.0.1 (DECO + DM) and the gold DC / DM logos, on GitHub. <a href="https://raw.githubusercontent.com/0xspotonchain/deco-tokens/main/tokenlist.json" target="_blank" rel="noopener">Token list ↗</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- POOLS + NAMES -->
+  <section id="pools">
+    <p class="eyebrow">{pools &amp; names}</p>
+    <h2>Pools + name service</h2>
+    <p class="section-intro">Five pools live, three names resolving to the burner. Reserves checked on-chain Nov 16, 18:49 GMT+7. Last updated Nov 16, 19:00 GMT+7.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>4 SimpleAMM pools</td><td><span class="badge live">Done</span></td><td>Nov 16, 14:15</td><td>Own constant-product pools (0.3% fee, no remove-liquidity), one per chain, seeded 10,000 DECO + base each. Reserves verified 18:49 GMT+7. <a href="index.html#pools">Pools →</a></td></tr>
+            <tr><td>Uniswap v4 pool (Robinhood)</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:28</td><td>Real v4 DECO/ETH pool, fee 3000, full-range. Seeded 0.0021 ETH + 70,000 DECO; position NFT #1070742 held by the burner. <a href="https://explorer.testnet.chain.robinhood.com/tx/0x86b457ccdf5388df76e8de479715f6b11cc4ebcd2852260ba1e379e49aff7955" target="_blank" rel="noopener">Initialize tx ↗</a></td></tr>
+            <tr><td>Name service + 12 soulbound NFTs</td><td><span class="badge live">Done</span></td><td>Nov 16, 14:15</td><td>deco (#1), muse (#2), 0xspotonchain (#3) all resolve to the burner on all 4 chains. Transfers and approvals revert — proven on-chain. <a href="index.html#names">Name service →</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Pools, name service and the volume sniper are modeled on our friend <a href="https://0xzunid.github.io/0xzunid.muse.ai/" target="_blank" rel="noopener">0xzunid</a>'s approach — credit where it's due. Ours is fully receipted: every round has a tx hash.</p>
+    </div>
+  </section>
+
+  <!-- SNIPER -->
+  <section id="sniper">
+    <p class="eyebrow">{sniper}</p>
+    <h2>Sniper</h2>
+    <p class="section-intro">Testnet-only, dry-run by default. First run complete on 3 chains; Velana still running. Last updated Nov 16, 18:51 GMT+7.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sniper bot</td><td><span class="badge live">Done</span></td><td>Nov 16</td><td>Dry-run 31/31 PASS. TP +100% / SL −50% / 1h time exit, spend caps, hard testnet-only guard. Live needs <code>LIVE.enabled</code> + <code>--live</code>. <a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">Repo ↗</a></td></tr>
+            <tr><td>First volume run — 3 chains</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:51</td><td>1,000/1,000 rounds each, 6,007 txs total. Arc 2,000 txs (4.253 USDC gas) · Robinhood 2,002 (0.001156 ETH) · LitVM 2,005 (0.0011619 zkLTC). All balances verified on-chain. <a href="https://github.com/0xspotonchain/deco-sniper/blob/main/VOLUMES.md" target="_blank" rel="noopener">Full record ↗</a></td></tr>
+            <tr><td>V4 live trades</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:51</td><td>Position-mode sniper did 2 full buy→sell cycles on the real v4 pool — 4 txs confirmed, net cost 0.0000125 ETH, burner DECO exactly unchanged. <a href="index.html#sniper">Trade links →</a></td></tr>
+            <tr><td>Velana volume run</td><td><span class="badge progress">In progress</span></td><td>Nov 16, 18:34</td><td>522/819 rounds, 1,045 txs. Stalled 18:34 GMT+7 when the Velana RPC returned 502 mid-round — the agent is resuming it. No orphan: burner + pool reconcile to exactly 1,000,000 DECO.</td></tr>
+            <tr><td>Daily volume cron</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>100 rounds/chain/day from Tue Nov 17, 11:11 GMT+7 (Arc, Robinhood, LitVM; Velana joins once its build lands). First run pending.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- VELANA -->
+  <section id="velana">
+    <p class="eyebrow">{velana}</p>
+    <h2>Velana</h2>
+    <p class="section-intro">Velana Testnet (chain 484148) — land, Testnet Points, token launcher, Vel Pay, and the free store + site builders. Rank #1 on the points leaderboard. Last updated Nov 16, 18:51 GMT+7.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Faucet + land plot #0</td><td><span class="badge live">Done</span></td><td>Nov 16, 14:15</td><td>10 test VELA claimed; plot #0 (row 0, col 0) claimed for 1.5 VELA (1.0 locked + 0.5 fee). Plot is unnamed so far. <a href="https://velanachain.com/explorer/#/tx/0x04882a2a395a0a4c4c459d3cbd08729436b0c530582bacbb201e17d47ba1caea" target="_blank" rel="noopener">Claim tx ↗</a></td></tr>
+            <tr><td>Builder store + site</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:06</td><td>"DECO Test Store" and "DECO" site live on the Velana builder; Vel Pay wallet set to the burner. The two tasks flipped the burner to rank #1. <a href="https://velanachain.com/builder/s/decoteststore" target="_blank" rel="noopener">Store ↗</a> <a href="https://velanachain.com/builder/s/deco" target="_blank" rel="noopener">Site ↗</a></td></tr>
+            <tr><td>Points sweep</td><td><span class="badge progress">In progress</span></td><td>Nov 16, 18:19</td><td>85 points, rank #1 of 23, 4/10 tasks done. Remaining: token launch +40, buy land +30, Vel Pay payment +25, sell land +30, rent out +30. Ordered by deco — the agent runs them after the volume run finishes (same burner nonce).</td></tr>
+            <tr><td>Build + furnishing</td><td><span class="badge blocked">Blocked</span></td><td>Nov 16, 18:19</td><td>Cheapest build (Kiosk) costs 10 tVELA; the burner holds ~8.5. Unblocks after the Tue Nov 17 faucet claim (~11:52 GMT+7, daily cron 12:05). Worth +30 build points plus up to +40 furnishing bonus.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Points are not tokens — no monetary value, no reward promised. The Nov 20 presale on Base is paid and out of scope. Velana is a young, unaudited, centralized testnet (launched ~Nov 13, 2026) and the network may reset.</p>
+    </div>
+  </section>
+
+  <!-- BOUNTIES -->
+  <section id="bounties">
+    <p class="eyebrow">{bounties &amp; contests}</p>
+    <h2>Bounties + contests</h2>
+    <p class="section-intro">Free only, no KYC, no Discord — X, GitHub and Telegram only. Paid entries are excluded, not negotiated. Last updated Nov 16, 18:30 GMT+7.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Agent Games — Creator Track</td><td><span class="badge progress">In progress</span></td><td>Nov 16, 14:44</td><td>Submitted, status PENDING. Article "Don't trust — verify: what my agent actually did, with receipts". Judging Nov 22–30; results watch cron runs daily then. <a href="https://x.com/0xSpotOnChain/status/2122232289690374442" target="_blank" rel="noopener">X post ↗</a> <a href="article.html">Article →</a></td></tr>
+            <tr><td>make.fun token-radar-01 ($1,325)</td><td><span class="badge progress">In progress</span></td><td>Nov 16, 17:36</td><td>Submitted Nov 16, 16:05. Round 1 fully passed (13/13 intake checks); dev-phase grading under way. Results due Dec 28, 22:10 UTC. <a href="https://github.com/0xspotonchain/token-launch-radar" target="_blank" rel="noopener">Repo ↗</a> <a href="https://make.fun/bounty/token-radar-01" target="_blank" rel="noopener">Bounty ↗</a></td></tr>
+            <tr><td>make.fun free sweep (8 builds, $5,000)</td><td><span class="badge progress">In progress</span></td><td>Nov 16, 18:30</td><td>Coordinator building all 8 free competitions as @deco. Tonight: bring-the-humans-01 ($1,000), markdown-render-speed-02 ($250), threejs-fps-02 ($1,000), ai-excited-01 ($250). Tue: free-model-aggregator-02 ($500). Later: best-game-01 ($1,000), github-core-clone-01 ($500), tiny-chess-01 ($500). <a href="https://make.fun/u/deco" target="_blank" rel="noopener">Profile ↗</a></td></tr>
+            <tr><td>CoW Protocol 100 DAI watch</td><td><span class="badge progress">In progress</span></td><td>Nov 16</td><td>Hourly watch live. Only one open <code>help wanted</code> issue: <a href="https://github.com/cowprotocol/services/issues/2394" target="_blank" rel="noopener">#2394 ↗</a> (Rust chore, Feb 2024) — stalled, awaiting maintainer scope confirmation. No actionable issue yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Excluded as paid: makefun-coin-promo-01 ($1,000 — needs ~0.05 real SOL) and makefun-frontend-01 ($500 — $0.50 USDC entry fee). The burner holds 0 mainnet SOL and 0 mainnet USDC, and mainnet spending always needs deco's go-ahead.</p>
+    </div>
+  </section>
+
+  <!-- VOICE EXPRESS -->
+  <section id="voice">
+    <p class="eyebrow">{voice express}</p>
+    <h2>VOICE Express</h2>
+    <p class="section-intro">Done by deco from his phone. Last updated Nov 16, 19:07 GMT+7.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>VOICE Express ticket</td><td><span class="badge live">Done</span></td><td>Nov 16, 19:07</td><td>Ticket issued: Economy class, seat #621, passenger @OxSpotOnChain. <a href="https://x.com/0xSpotOnChain/status/2122299072136794366" target="_blank" rel="noopener">X post ↗</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="pool-note"><strong>Caveat:</strong> the $VOICE airdrop needs a VOICY Pass whose mint closed — the Express ticket is done, but airdrop eligibility is still unclear. The Express campaign ends Wed Nov 19.</p>
+    </div>
+  </section>
+
+  <!-- FAUCETS -->
+  <section id="faucets">
+    <p class="eyebrow">{faucets &amp; claims}</p>
+    <h2>Faucets + claims</h2>
+    <p class="section-intro">Rule: claim ALL available faucets for the burner. Scheduled claims run on Muse's VM and stay quiet unless something fails. Last updated Nov 16, 18:30 GMT+7.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Arc daily claim (Circle)</td><td><span class="badge live">Done</span></td><td>Nov 16</td><td>USDC only, daily ~09:11 GMT+7. Running since Nov 15. <a href="https://github.com/0xspotonchain/deco-circle-wallet" target="_blank" rel="noopener">Repo ↗</a></td></tr>
+            <tr><td>Burner daily claims</td><td><span class="badge live">Done</span></td><td>Nov 16</td><td>BTC testnet4, Robinhood, LitVM daily ~10:11 GMT+7. TRON Nile + Solana devnet (ZalalenA) join from Tue Nov 17.</td></tr>
+            <tr><td>Circle web faucet (every 2h)</td><td><span class="badge live">Done</span></td><td>Nov 16</td><td>8 claims/run for the burner: USDC+EURC on Sepolia, Arc and Base Sepolia; USDC on Arbitrum Sepolia and OP Sepolia. Running since Nov 16, 05:38 GMT+7. <a href="https://faucet.circle.com" target="_blank" rel="noopener">Faucet ↗</a></td></tr>
+            <tr><td>Velana daily faucet</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>10 test VELA/day from Tue Nov 17, 12:05 GMT+7. First scheduled run pending. <a href="https://velanachain.com/faucet.html" target="_blank" rel="noopener">Faucet ↗</a></td></tr>
+            <tr><td>Sepolia ETH</td><td><span class="badge blocked">Blocked</span></td><td>Nov 16, 15:27</td><td>0 ETH. A 6-faucet sweep all failed (Chainstack, ethfaucet.com, Grabteeth, OpenFaucet dry, Chain Platform, Infura). One-time retry Tue Nov 17, 17:00 GMT+7 (pk910, then testnet.help). Chainlink is deco's phone step.</td></tr>
+            <tr><td>Robinhood faucet</td><td><span class="badge blocked">Blocked</span></td><td>Nov 16, 03:54</td><td>Failing since Nov 16 ~03:54 GMT+7 — captcha solved 3× but the faucet replied "Please verify again", no payout. If Tue's run fails again, treat it as broken for the VM and find an alternative. <a href="https://faucet.zalalena.com/robinhood" target="_blank" rel="noopener">Faucet ↗</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Standing rule: if a new faucet being tried works, it gets scheduled as a recurring claim like the others. <a href="faucets.html">Full faucet list →</a></p>
+    </div>
+  </section>
+
+  <!-- AIRDROP WATCH -->
+  <section id="airdrop">
+    <p class="eyebrow">{airdrop watch}</p>
+    <h2>Airdrop watch</h2>
+    <p class="section-intro">Verified-only, referral links stripped, unverified claims skipped. Last updated Nov 16, 18:31 GMT+7.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>@airdropfind hourly digest</td><td><span class="badge live">Done</span></td><td>Nov 16, 18:31</td><td>Checked every hour since Nov 16; new verified items reach deco within about an hour of posting. Last check 18:31 GMT+7: one new post (Foxora) — no corroboration anywhere, so nothing was reported. <a href="https://t.me/s/airdropfind" target="_blank" rel="noopener">Channel ↗</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- DECO'S STEPS -->
+  <section id="your-steps">
+    <p class="eyebrow">{your steps}</p>
+    <h2>Deco's open steps</h2>
+    <p class="section-intro">The actions only deco can do — they need his phone, his desktop, or his decision. Last updated Nov 16, 19:08 GMT+7.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table prog-table">
+          <thead>
+            <tr><th>Item</th><th>Status</th><th>Updated</th><th>Next step</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Chainlink faucet (phone)</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>Open <a href="https://faucets.chain.link" target="_blank" rel="noopener">faucets.chain.link ↗</a> → connect your phone wallet → Sepolia, 25 LINK → paste the burner <code>0xF1d949ed9B0b62508203AB0B91Bf01E73309Ad31</code> as recipient. Try the 0.5 ETH too (likely refused — it needs ≥1 LINK on Ethereum Mainnet). Never connect the burner wallet itself.</td></tr>
+            <tr><td>Sepolia self-claim</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>From your own device — the VM is blocked. <a href="https://sepolia-faucet.pk910.de" target="_blank" rel="noopener">pk910 ↗</a>: paste the burner address, pass the check, Start Mining until ≥0.05, then claim. Or the <a href="https://cloud.google.com/application/web3/faucet" target="_blank" rel="noopener">Google Cloud faucet ↗</a> (0.05 ETH, Google sign-in).</td></tr>
+            <tr><td>Bitcoin Hyper (desktop)</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>Desktop Chrome/Brave only. Install the Hyper wallet from <a href="https://bitcoinhyper.com/assets/wallet" target="_blank" rel="noopener">bitcoinhyper.com ↗</a>, create a FRESH test-only wallet (never import any seed), claim at the <a href="https://bridge.testnet.bitcoinhyper.io/hyper-faucet" target="_blank" rel="noopener">faucet ↗</a>, then stake. Test HYPER never converts to real HYPER. Skip the bridge (real gas) and the presale (paid).</td></tr>
+            <tr><td>Dashboard visual check</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>Open the Wallet Dashboard in the app and confirm the numbers look right.</td></tr>
+            <tr><td>Burner import confirmation</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>Open the <a href="decryptor.html">offline decryptor →</a>, reveal your 12-word seed, import it into Trust / MetaMask, and check the addresses match the ones on this site.</td></tr>
+            <tr><td>Velana plot #0 naming</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>Plot #0 has no name yet. Pick a name and Muse sets it on-chain (setPlot) — or name it yourself on the Velana site.</td></tr>
+            <tr><td>Calendar deadlines</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>Offer open: put the real deadlines (Agent Games, make.fun, judging, sessions) on the calendar. Say the word.</td></tr>
+            <tr><td>Chain Platform decision</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td>Funding the burner with ≥0.001 real ETH would unlock its 0.1 Sepolia ETH drip. Mainnet — needs your go-ahead, and it has not been given.</td></tr>
+            <tr><td>Crypto Chief decision</td><td><span class="badge soon">Todo</span></td><td>Nov 16</td><td><a href="https://crypto-chief.com/faucet" target="_blank" rel="noopener">crypto-chief.com/faucet ↗</a> covers 10 testnets with no captcha, but needs an account. Unverified third party — your call whether to sign up.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- MILESTONES -->
+  <section id="milestones">
+    <p class="eyebrow">{milestones}</p>
+    <h2>Milestones</h2>
+    <p class="section-intro">What's coming, in order. All times GMT+7 unless marked UTC. Last updated Nov 16, 19:08 GMT+7.</p>
+    <ul class="chain-list">
+      <li><strong>Tue Nov 17, 01:00</strong> <span class="muted">· make.fun bring-the-humans-01 ends ($1,000)</span></li>
+      <li><strong>Tue Nov 17, 03:30</strong> <span class="muted">· make.fun markdown-render-speed-02 ends ($250)</span></li>
+      <li><strong>Tue Nov 17, 04:30</strong> <span class="muted">· make.fun threejs-fps-02 ends ($1,000)</span></li>
+      <li><strong>Tue Nov 17, 06:00</strong> <span class="muted">· make.fun ai-excited-01 ends ($250)</span></li>
+      <li><strong>Tue Nov 17, 09:11</strong> <span class="muted">· Arc daily claim (Circle USDC)</span></li>
+      <li><strong>Tue Nov 17, 10:11</strong> <span class="muted">· Burner daily claims — BTC, Robinhood, LitVM, TRON Nile + Solana devnet join</span></li>
+      <li><strong>Tue Nov 17, 10:30</strong> <span class="muted">· make.fun free-model-aggregator-02 ends ($500)</span></li>
+      <li><strong>Tue Nov 17, 11:11</strong> <span class="muted">· First daily sniper volume run — 100 rounds/chain/day</span></li>
+      <li><strong>Tue Nov 17, 12:05</strong> <span class="muted">· Velana daily faucet — unblocks build + furnishing (10 tVELA Kiosk)</span></li>
+      <li><strong>Tue Nov 17, 17:00</strong> <span class="muted">· Sepolia faucet retry — pk910 first, then testnet.help</span></li>
+      <li><strong>Wed Nov 19, 01:00</strong> <span class="muted">· make.fun best-game-01 ends ($1,000) · VOICE Express ends</span></li>
+      <li><strong>Fri Nov 21, 13:30</strong> <span class="muted">· make.fun github-core-clone-01 ends ($500)</span></li>
+      <li><strong>Fri Nov 21, 22:00 UTC</strong> <span class="muted">· Agent Games entries close (already submitted, 5 days early)</span></li>
+      <li><strong>Nov 22–30</strong> <span class="muted">· Agent Games judging — results watch runs daily ~10:00 GMT+7</span></li>
+      <li><strong>Tue Nov 25, 00:00</strong> <span class="muted">· make.fun tiny-chess-01 ends ($500)</span></li>
+      <li><strong>Sun Nov 30</strong> <span class="muted">· LayerZero ATLAS / Zero chain launch — watch only, nothing to claim</span></li>
+      <li><strong>Sat Dec 5</strong> <span class="muted">· $ZAPLET TOP10 hodlers distribution (calendar event — the burner holds 0 ZAPLET)</span></li>
+      <li><strong>~Dec 12</strong> <span class="muted">· Circle testnet session expires — re-login needs a fresh OTP from deco</span></li>
+      <li><strong>Mon Dec 14, 10:00 UTC</strong> <span class="muted">· make.fun token-radar-01 deadline (already submitted) · Circle mainnet session expires ~Dec 14</span></li>
+      <li><strong>Wed Dec 16</strong> <span class="muted">· make.fun CLI credentials expire — re-register with the burner Solana keypair</span></li>
+      <li><strong>Mon Dec 28, 22:10 UTC</strong> <span class="muted">· make.fun token-radar-01 results due (30-day claim window)</span></li>
+    </ul>
+    <p><a class="back-link" href="index.html">← Back to DECO</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>Built by <strong>deco.muse</strong> · zero real money · testnets only · DYOR.</p>
+  <p class="muted">Built with <a href="https://muse.ai" target="_blank" rel="noopener">Muse</a> — deco's AI agent.</p>
+  <p class="muted">Public addresses only. Never a seed phrase, never a private key. Don't trust — verify.</p>
+  <p class="muted">Also tracked on the <a href="https://github.com/users/0xspotonchain/projects/1" target="_blank" rel="noopener">GitHub Project board ↗</a>.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
