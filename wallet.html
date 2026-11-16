@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burner wallet — DECO</title>
+<meta name="description" content="How deco's multichain burner wallet was built — one BIP39 seed, five chains, 8/8 tests, offline decryptor. MIT licensed, fork it and build your own.">
+<link rel="icon" href="assets/deco-logo-256.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/deco-logo-256.png" alt="DECO logo" width="32" height="32">
+    <span>DECO</span>
+  </a>
+  <nav class="nav">
+    <a href="index.html#tokens">Tokens</a>
+    <a href="index.html#nft">NFT</a>
+    <a href="index.html#sniper">Sniper</a>
+    <a href="index.html#wallets">Wallets</a>
+    <a href="index.html#tools">Tools</a>
+    <a href="index.html#chains">Chains</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Burner wallet</h1>
+    <p class="tagline">One BIP39 seed, five chains — built in the open, MIT licensed. Fork it and build your own.</p>
+    <p class="motto">"Not your keys, not your coins."</p>
+    <div class="hero-links">
+      <a class="btn gold" href="https://github.com/0xspotonchain/deco-wallet" target="_blank" rel="noopener">Fork it on GitHub ↗</a>
+      <a class="btn" href="decryptor.html">Open the decryptor →</a>
+    </div>
+  </section>
+
+  <!-- HOW IT WAS BUILT -->
+  <section>
+    <h2>How it was built</h2>
+    <p class="section-intro">Seven steps, all in <code>generate.js</code> — run once, refuses to overwrite an existing wallet, prints only public addresses and test results. Never a seed, never a private key, never the passphrase.</p>
+    <div class="card">
+      <ol>
+        <li><strong>Seed</strong> — 12-word BIP39 mnemonic, 128-bit entropy.</li>
+        <li><strong>Derive</strong> — five chains from the one seed, standard paths (table below).</li>
+        <li><strong>Machine keystore</strong> — keys encrypted AES-256-GCM with a random key in <code>~/.config/multichain-wallet/vm-key</code> (0600), so the agent can sign without asking each time.</li>
+        <li><strong>Encrypted backup</strong> — seed + every private key, scrypt (N=16384) + AES-256-GCM with your own backup passphrase. Without it, unreadable.</li>
+        <li><strong>EVM keystore V3</strong> — same passphrase, imports into MetaMask desktop.</li>
+        <li><strong>Addresses file</strong> — public addresses only, safe to share.</li>
+        <li><strong>8 tests</strong> — EVM + Solana sign/verify, TRON + BTC re-derive, backup + keystore decrypt round-trips, EVM keystore V3 round-trip. All PASS before the wallet touched a faucet.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PATHS -->
+  <section>
+    <h2>Derivation paths</h2>
+    <div class="card">
+      <dl class="facts">
+        <div><dt>Bitcoin SegWit</dt><dd>m/84'/0'/0'/0/0</dd></div>
+        <div><dt>Bitcoin testnet4</dt><dd>m/84'/1'/0'/0/0</dd></div>
+        <div><dt>EVM (all chains)</dt><dd>m/44'/60'/0'/0/0</dd></div>
+        <div><dt>Solana (Phantom)</dt><dd>m/44'/501'/0'/0'</dd></div>
+        <div><dt>TRON</dt><dd>m/44'/195'/0'/0/0</dd></div>
+      </dl>
+      <p class="muted">Paths verified against public test vectors before the wallet was created — <code>test-vectors.js</code>, run it with <code>npm test</code>.</p>
+    </div>
+  </section>
+
+  <!-- DECRYPTOR -->
+  <section>
+    <h2>Decryptor tools</h2>
+    <p class="section-intro">Two offline ways to open the encrypted backup. Both run locally — no network code, nothing leaves your device.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Browser decryptor</h3>
+        <p>One HTML file, pure-JS scrypt + WebCrypto AES-GCM. Pick the backup file, enter your password, get the seed + keys with copy buttons. Works on a phone.</p>
+        <p class="card-links"><a href="decryptor.html">Open it →</a></p>
+      </div>
+      <div class="card">
+        <h3>Node decryptor</h3>
+        <p><code>decrypt.js</code> — no dependencies. <code>--verify</code> checks the password and shows addresses only; without it, the full backup.</p>
+        <p class="card-links"><a href="https://github.com/0xspotonchain/deco-wallet/blob/main/decrypt.js" target="_blank" rel="noopener">decrypt.js ↗</a></p>
+      </div>
+    </div>
+    <p class="status-paused"><strong>Stay safe:</strong> the decryptor shows your seed phrase and private keys — never paste them anywhere, never screenshot them. For maximum safety, download the decryptor from the repo and open it with Wi-Fi off.</p>
+  </section>
+
+  <!-- BUILD YOUR OWN -->
+  <section>
+    <h2>Build your own</h2>
+    <div class="card">
+      <p><code>git clone https://github.com/0xspotonchain/deco-wallet.git</code> — <code>npm install</code> — <code>npm test</code> — <code>node generate.js</code>. Full steps in the repo README.</p>
+      <p class="card-links"><a href="https://github.com/0xspotonchain/deco-wallet" target="_blank" rel="noopener">Repo ↗</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Built by <strong>deco + Muse</strong> · zero real money · testnets only · DYOR.</p>
+  <p class="muted">Public addresses only. Never a seed phrase, never a private key. Don't trust — verify.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
