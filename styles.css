@@ -237,6 +237,21 @@ section { margin-top: 3rem; }
 }
 .badge.live { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
 .badge.soon { background: var(--amber-bg); color: var(--orange-dark); border: 1px solid var(--orange); }
+.badge.progress { background: var(--sky-light); color: var(--navy-soft); border: 1px solid var(--sky); }
+.status-live {
+  background: var(--green-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+/* Volumes table */
+.table-wrap { overflow-x: auto; margin: 0 -0.25rem; }
+.vol-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 640px; }
+.vol-table th, .vol-table td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; white-space: nowrap; }
+.vol-table th { color: var(--muted); font-weight: 600; }
+.vol-table td a { white-space: nowrap; }
 
 .subhead { margin-top: 2rem; }
 .chain-list { list-style: none; padding: 0; display: grid; gap: 0.5rem; }

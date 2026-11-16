@@ -17,7 +17,9 @@
   <nav class="nav">
     <a href="#tokens">Tokens</a>
     <a href="#nft">NFT</a>
+    <a href="#pools">Pools</a>
     <a href="#sniper">Sniper</a>
+    <a href="#volumes">Volumes</a>
     <a href="#wallets">Wallets</a>
     <a href="#tools">Tools</a>
     <a href="#chains">Chains</a>
@@ -39,10 +41,11 @@
       <a class="btn" href="https://github.com/0xspotonchain" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <div class="stats">
-      <div class="stat"><strong>3</strong><span>testnets with deploys</span></div>
+      <div class="stat"><strong>4</strong><span>testnets with deploys</span></div>
       <div class="stat"><strong>2</strong><span>ERC-20 tokens · DECO + DM</span></div>
       <div class="stat"><strong>1</strong><span>NFT collection · DNFT #1</span></div>
-      <div class="stat"><strong>0</strong><span>pools yet — coming soon</span></div>
+      <div class="stat"><strong>5</strong><span>pools live · 4 SimpleAMM + 1 Uniswap v4</span></div>
+      <div class="stat"><strong>7,052</strong><span>volume txs · Nov 16 first run</span></div>
       <div class="stat"><strong>2</strong><span>wallets</span></div>
       <div class="stat"><strong>5</strong><span>project repos on GitHub</span></div>
     </div>
@@ -60,22 +63,22 @@
   <section id="tokens">
     <p class="eyebrow">{tokens}</p>
     <h2>Tokens</h2>
-    <p class="section-intro">Two tokens: DECO on three chains from the burner wallet, and DM on Arc from the Circle wallet. Tap any address to open it on the chain explorer, or copy it with the button.</p>
+    <p class="section-intro">Two tokens: DECO on four chains from the burner wallet, and DM on Arc from the Circle wallet. Tap any address to open it on the chain explorer, or copy it with the button.</p>
     <div class="card token-card">
       <div class="token-head">
         <img src="assets/deco-logo-256.png" alt="DECO logo" width="56" height="56">
         <div>
           <h3>DECO <span class="muted">Deco Token</span></h3>
-          <p class="muted">Burner wallet · deployed on all three testnets</p>
+          <p class="muted">Burner wallet · deployed on all four testnets</p>
         </div>
       </div>
       <dl class="facts">
         <div><dt>Standard</dt><dd>ERC-20</dd></div>
         <div><dt>Supply</dt><dd>1,000,000 (fixed)</dd></div>
         <div><dt>Decimals</dt><dd>18</dd></div>
-        <div><dt>Chains</dt><dd>3</dd></div>
+        <div><dt>Chains</dt><dd>4</dd></div>
       </dl>
-      <p class="label">Token contract (same on all three chains)</p>
+      <p class="label">Token contract (same on Arc, Robinhood, LitVM — Velana differs)</p>
       <p class="addr-row">
         <a class="addr" href="https://explorer.testnet.arc.io/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783</a>
         <button class="copy" data-copy="0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" type="button">Copy</button>
@@ -84,8 +87,9 @@
         <li><a href="https://explorer.testnet.arc.io/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">Arc Testnet ↗</a> <span class="muted">· chain 5042002</span></li>
         <li><a href="https://explorer.testnet.chain.robinhood.com/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">Robinhood Chain Testnet ↗</a> <span class="muted">· chain 46630</span></li>
         <li><a href="https://explorer.testnet.liteforge.zeeve.net/address/0x5f1dF574015C9D044b4C9Ef658cD55aFcC13D783" target="_blank" rel="noopener">LitVM LiteForge ↗</a> <span class="muted">· chain 4441</span></li>
+        <li><a href="https://velanachain.com/explorer/#/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">Velana Testnet ↗</a> <span class="muted">· chain 484148 · 0xDf8A3BaAFffc5de3938bff1158584E841531BcbF</span></li>
       </ul>
-      <p class="pool-note"><strong>Pools: coming soon.</strong> No DECO pools exist yet — pool creation is paused. Nothing here claims a live pool.</p>
+      <p class="pool-note"><strong>Pools: live on all four chains.</strong> Own SimpleAMM pools seeded 10,000 DECO + base each — see the <a href="#pools">Pools section</a> below. Plus a real Uniswap v4 DECO/ETH pool on Robinhood.</p>
       <p class="card-links">
         <a href="https://raw.githubusercontent.com/0xspotonchain/deco-tokens/main/tokenlist.json" target="_blank" rel="noopener">Token list ↗</a>
         <a href="https://github.com/0xspotonchain/deco-tokens" target="_blank" rel="noopener">Repo ↗</a>
@@ -125,18 +129,18 @@
   <section id="nft">
     <p class="eyebrow">{nft}</p>
     <h2>NFT</h2>
-    <p class="section-intro">One collection, one token per chain — token #1 minted to the burner on all three testnets. Metadata and artwork are stored fully onchain, no hosting.</p>
+    <p class="section-intro">One collection, one token per chain — token #1 minted to the burner on all four testnets. Metadata and artwork are stored fully onchain, no hosting.</p>
     <div class="card nft-card">
       <img class="nft-art" src="assets/nft-image.svg" alt="Deco NFT #1 artwork — DECO badge" width="512" height="512">
       <div>
         <h3>DNFT <span class="muted">Deco NFT · #1</span></h3>
         <dl class="facts">
           <div><dt>Standard</dt><dd>ERC-721</dd></div>
-          <div><dt>Tokens</dt><dd>#1 on 3 chains</dd></div>
+          <div><dt>Tokens</dt><dd>#1 on 4 chains</dd></div>
           <div><dt>Metadata</dt><dd>100% onchain (data URI)</dd></div>
           <div><dt>Holder</dt><dd>Burner wallet</dd></div>
         </dl>
-        <p class="label">NFT contract (same on all three chains)</p>
+        <p class="label">NFT contract (same on Arc, Robinhood, LitVM — Velana differs)</p>
         <p class="addr-row">
           <a class="addr" href="https://explorer.testnet.arc.io/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">0xDf8A3BaAFffc5de3938bff1158584E841531BcbF</a>
           <button class="copy" data-copy="0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" type="button">Copy</button>
@@ -145,8 +149,127 @@
           <li><a href="https://explorer.testnet.arc.io/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">Arc Testnet ↗</a></li>
           <li><a href="https://explorer.testnet.chain.robinhood.com/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">Robinhood Chain Testnet ↗</a></li>
           <li><a href="https://explorer.testnet.liteforge.zeeve.net/address/0xDf8A3BaAFffc5de3938bff1158584E841531BcbF" target="_blank" rel="noopener">LitVM LiteForge ↗</a></li>
+          <li><a href="https://velanachain.com/explorer/#/address/0xFb71a0C41f1D5D737acb5761eF110B1E0695fC64" target="_blank" rel="noopener">Velana Testnet ↗</a> <span class="muted">· 0xFb71a0C41f1D5D737acb5761eF110B1E0695fC64</span></li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- POOLS -->
+  <section id="pools">
+    <p class="eyebrow">{pools}</p>
+    <h2>Pools</h2>
+    <p class="section-intro">Five live pools. Four are deco's own SimpleAMM pools (constant-product, 0.3% fee, no remove-liquidity — the seed stays locked), one per chain, each seeded 10,000 DECO + base. The fifth is a real Uniswap v4 pool on Robinhood. Reserves checked on-chain 18:49 GMT+7, Nov 16, 2026.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Arc · DECO / USDC</h3>
+        <p><span class="badge live">Live</span> <span class="muted">SimpleAMM · chain 5042002</span></p>
+        <dl class="facts">
+          <div><dt>Seed</dt><dd>10,000 DECO + 10 USDC</dd></div>
+          <div><dt>Reserves now</dt><dd>9,999.9999 DECO / 10.663229 USDC</dd></div>
+        </dl>
+        <p class="label">Pool</p>
+        <p class="addr-row">
+          <a class="addr" href="https://explorer.testnet.arc.io/address/0x3137C615F3f3B1e7C8F75390F8ccb128f4D11A3A" target="_blank" rel="noopener">0x3137C615F3f3B1e7C8F75390F8ccb128f4D11A3A</a>
+          <button class="copy" data-copy="0x3137C615F3f3B1e7C8F75390F8ccb128f4D11A3A" type="button">Copy</button>
+        </p>
+        <p class="card-links"><a href="https://explorer.testnet.arc.io/tx/0xc9ad165f28491f4bed2e22044d63e9b29b352e6a8c79eb6e8f183210745a56eb" target="_blank" rel="noopener">First volume tx ↗</a> <a href="https://explorer.testnet.arc.io/tx/0x7b118c50eb8b3132b80192212df0575a9558ee5e66c6f1e7a94897e8c6f833d2" target="_blank" rel="noopener">Last volume tx ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Robinhood · DECO / ETH</h3>
+        <p><span class="badge live">Live</span> <span class="muted">SimpleAMM · chain 46630</span></p>
+        <dl class="facts">
+          <div><dt>Seed</dt><dd>10,000 DECO + 0.001 ETH</dd></div>
+          <div><dt>Reserves now</dt><dd>10,000 DECO / 0.0015591 ETH</dd></div>
+        </dl>
+        <p class="label">Pool</p>
+        <p class="addr-row">
+          <a class="addr" href="https://explorer.testnet.chain.robinhood.com/address/0xC72A740883E93E899C02036f96841869A5BdbbDC" target="_blank" rel="noopener">0xC72A740883E93E899C02036f96841869A5BdbbDC</a>
+          <button class="copy" data-copy="0xC72A740883E93E899C02036f96841869A5BdbbDC" type="button">Copy</button>
+        </p>
+        <p class="card-links"><a href="https://explorer.testnet.chain.robinhood.com/tx/0xf9276b50c9bdb40ae84262d7b0364272093c23bb17f67719f066a8d9e0c735d5" target="_blank" rel="noopener">First volume tx ↗</a> <a href="https://explorer.testnet.chain.robinhood.com/tx/0x143cfd95553953fa70771ac9a5720858a72af4ae768c3355551982b1e96b7f0c" target="_blank" rel="noopener">Last volume tx ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>LitVM · DECO / zkLTC</h3>
+        <p><span class="badge live">Live</span> <span class="muted">SimpleAMM · chain 4441</span></p>
+        <dl class="facts">
+          <div><dt>Seed</dt><dd>10,000 DECO + 0.001 zkLTC</dd></div>
+          <div><dt>Reserves now</dt><dd>10,000 DECO / 0.0015349 zkLTC</dd></div>
+        </dl>
+        <p class="label">Pool</p>
+        <p class="addr-row">
+          <a class="addr" href="https://explorer.testnet.liteforge.zeeve.net/address/0x3137C615F3f3B1e7C8F75390F8ccb128f4D11A3A" target="_blank" rel="noopener">0x3137C615F3f3B1e7C8F75390F8ccb128f4D11A3A</a>
+          <button class="copy" data-copy="0x3137C615F3f3B1e7C8F75390F8ccb128f4D11A3A" type="button">Copy</button>
+        </p>
+        <p class="card-links"><a href="https://explorer.testnet.liteforge.zeeve.net/tx/0x174263fc3bc07320211f8a45f9b408c2d847bbced0a644a50e0f927c3acbeffb" target="_blank" rel="noopener">First volume tx ↗</a> <a href="https://explorer.testnet.liteforge.zeeve.net/tx/0xe1eb3cb4d7466fa22b7fa1307add70efe96811ddbc27b7de228db95c55dd9c0a" target="_blank" rel="noopener">Last volume tx ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Velana · DECO / VELA</h3>
+        <p><span class="badge live">Live</span> <span class="muted">SimpleAMM · chain 484148</span></p>
+        <dl class="facts">
+          <div><dt>Seed</dt><dd>10,000 DECO + 0.001 VELA</dd></div>
+          <div><dt>Reserves now</dt><dd>10,000 DECO / 0.0013924 VELA</dd></div>
+        </dl>
+        <p class="label">Pool</p>
+        <p class="addr-row">
+          <a class="addr" href="https://velanachain.com/explorer/#/address/0xa81056EF621c952B5Fc033D7db159a0Da4ED5163" target="_blank" rel="noopener">0xa81056EF621c952B5Fc033D7db159a0Da4ED5163</a>
+          <button class="copy" data-copy="0xa81056EF621c952B5Fc033D7db159a0Da4ED5163" type="button">Copy</button>
+        </p>
+        <p class="card-links"><a href="https://velanachain.com/explorer/#/tx/0xa4d49976136164dfd8277358c531f581529fdb8d9f61d13e4c5aff4f3805f070" target="_blank" rel="noopener">First volume tx ↗</a> <a href="https://velanachain.com/explorer/#/tx/0x95ec7b49d68bc75c2f8d52310389383bf0966e467bd365736b70e21585c2fd9b" target="_blank" rel="noopener">Last volume tx ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Robinhood · DECO / ETH <span class="muted">Uniswap v4</span></h3>
+        <p><span class="badge live">Live</span> <span class="muted">Real v4 pool · chain 46630 · fee 3000 · full-range</span></p>
+        <dl class="facts">
+          <div><dt>Seed</dt><dd>0.0021 ETH + 70,000 DECO</dd></div>
+          <div><dt>Position NFT</dt><dd>#1070742 · held by the burner</dd></div>
+        </dl>
+        <p class="label">Pool ID</p>
+        <p class="addr-row">
+          <a class="addr" href="https://explorer.testnet.chain.robinhood.com/tx/0x86b457ccdf5388df76e8de479715f6b11cc4ebcd2852260ba1e379e49aff7955" target="_blank" rel="noopener">0x0c6d73c11e075cd18082b5aae55828c76a3d2b31f2f3e06558d75bd58d0363f7</a>
+          <button class="copy" data-copy="0x0c6d73c11e075cd18082b5aae55828c76a3d2b31f2f3e06558d75bd58d0363f7" type="button">Copy</button>
+        </p>
+        <p class="card-links"><a href="https://explorer.testnet.chain.robinhood.com/tx/0x86b457ccdf5388df76e8de479715f6b11cc4ebcd2852260ba1e379e49aff7955" target="_blank" rel="noopener">Initialize tx ↗</a> <a href="https://explorer.testnet.chain.robinhood.com/tx/0xa5287d3764e0c88f08b4821a066389ffc83a7205167509dc3662232f353c5187" target="_blank" rel="noopener">Mint tx ↗</a></p>
+      </div>
+    </div>
+    <p class="card-links"><a href="https://github.com/0xspotonchain/deco-tokens" target="_blank" rel="noopener">Pool contracts ↗</a> <a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">Sniper repo ↗</a></p>
+  </section>
+
+  <!-- NAME SERVICE -->
+  <section id="names">
+    <p class="eyebrow">{names}</p>
+    <h2>Name service</h2>
+    <p class="section-intro">Own ENS-style registry — three names, all resolving to the burner wallet, on all four chains. Each name has a soulbound NFT: minting only, transfers and approvals always revert (proven on-chain on every chain). 12 name NFTs in total.</p>
+    <div class="card">
+      <h3>DecoNameService</h3>
+      <dl class="facts">
+        <div><dt>deco</dt><dd>#1 → burner</dd></div>
+        <div><dt>muse</dt><dd>#2 → burner</dd></div>
+        <div><dt>0xspotonchain</dt><dd>#3 → burner</dd></div>
+        <div><dt>Name NFTs</dt><dd>12 soulbound (3 per chain)</dd></div>
+      </dl>
+      <p class="label">Registry (Arc, Robinhood, LitVM)</p>
+      <p class="addr-row">
+        <a class="addr" href="https://explorer.testnet.arc.io/address/0x9d1217DD428440ef49C59CCa2085aF6bd7A7a5b6" target="_blank" rel="noopener">0x9d1217DD428440ef49C59CCa2085aF6bd7A7a5b6</a>
+        <button class="copy" data-copy="0x9d1217DD428440ef49C59CCa2085aF6bd7A7a5b6" type="button">Copy</button>
+      </p>
+      <p class="label">Name NFT (Arc, Robinhood, LitVM)</p>
+      <p class="addr-row">
+        <a class="addr" href="https://explorer.testnet.arc.io/address/0x553c4212254DA568FdDc5Cc312318bB6c0fBB0E4" target="_blank" rel="noopener">0x553c4212254DA568FdDc5Cc312318bB6c0fBB0E4</a>
+        <button class="copy" data-copy="0x553c4212254DA568FdDc5Cc312318bB6c0fBB0E4" type="button">Copy</button>
+      </p>
+      <p class="label">Registry (Velana)</p>
+      <p class="addr-row">
+        <a class="addr" href="https://velanachain.com/explorer/#/address/0xa9928a4D673dFb5a0922e9d76fC731c4D06Ad7c4" target="_blank" rel="noopener">0xa9928a4D673dFb5a0922e9d76fC731c4D06Ad7c4</a>
+        <button class="copy" data-copy="0xa9928a4D673dFb5a0922e9d76fC731c4D06Ad7c4" type="button">Copy</button>
+      </p>
+      <p class="label">Name NFT (Velana)</p>
+      <p class="addr-row">
+        <a class="addr" href="https://velanachain.com/explorer/#/address/0xC72A740883E93E899C02036f96841869A5BdbbDC" target="_blank" rel="noopener">0xC72A740883E93E899C02036f96841869A5BdbbDC</a>
+        <button class="copy" data-copy="0xC72A740883E93E899C02036f96841869A5BdbbDC" type="button">Copy</button>
+      </p>
+      <p class="pool-note"><strong>Soulbound, proven.</strong> <code>transferFrom</code>, <code>approve</code> and <code>setApprovalForAll</code> all revert with the soulbound custom errors — checked on all four chains. The Velana name NFT address happens to match the Robinhood pool address (a CREATE + nonce coincidence across chains — different contracts).</p>
+      <p class="card-links"><a href="https://github.com/0xspotonchain/deco-tokens" target="_blank" rel="noopener">Contracts ↗</a></p>
     </div>
   </section>
 
@@ -154,7 +277,7 @@
   <section id="sniper">
     <p class="eyebrow">{sniper}</p>
     <h2>Sniper</h2>
-    <p class="section-intro">A testnet-only buy/sell sniper for the burner wallet on Arc, Robinhood and LitVM. Dry-run by default — live mode needs explicit approval, every time. Pools, name service and volume mode are modeled on our friend <a href="https://0xzunid.github.io/0xzunid.muse.ai/" target="_blank" rel="noopener">0xzunid</a>'s approach — credit where it's due.</p>
+    <p class="section-intro">A testnet-only buy/sell sniper for the burner wallet on Arc, Robinhood, LitVM and Velana. Dry-run by default — live mode needs explicit approval, every time. Pools, name service and volume mode are modeled on our friend <a href="https://0xzunid.github.io/0xzunid.muse.ai/" target="_blank" rel="noopener">0xzunid</a>'s approach — credit where it's due.</p>
     <div class="card">
       <h3>DECO sniper bot</h3>
       <dl class="facts">
@@ -166,8 +289,34 @@
         <div><dt>Guard</dt><dd>Testnet-only, hard-coded</dd></div>
       </dl>
       <p>Pair watcher (polling — public RPCs expose no mempool), target-token mode for DECO, TP / SL / time exits, and spend caps per trade and per run. Live trading needs <code>LIVE.enabled</code> plus <code>--live</code>; either one alone keeps it in dry-run.</p>
-      <p class="status-paused"><strong>Status: built + dry-run tested.</strong> The live pool + spam run is PAUSED by deco — no pool created, no liquidity, no trades. Resumes only on his say-so.</p>
-      <p class="card-links"><a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">Repo ↗</a></p>
+      <p class="status-live"><strong>Status: LIVE — volume mode running.</strong> First run complete on 3 chains: 1,000/1,000 rounds each on Arc, Robinhood and LitVM (6,007 txs). Velana is at 522/819 rounds and still running. From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7.</p>
+      <p class="pool-note"><strong>Uniswap v4: traded live.</strong> The position-mode sniper did 2 full buy→sell cycles on the real Robinhood v4 DECO/ETH pool (4 txs confirmed, total net cost 0.0000125 ETH, burner DECO exactly unchanged). First cycle: <a href="https://explorer.testnet.chain.robinhood.com/tx/0xbb654db544b24de3b10d8ff945ce3332c6d59fdf3925b3be9d4ffb1b464b55ab" target="_blank" rel="noopener">buy ↗</a> / <a href="https://explorer.testnet.chain.robinhood.com/tx/0x0ca08b1c3670c3dc3dd9fec3c572f4fc7cd5d97e1c89acb7d07550570dca1d5f" target="_blank" rel="noopener">sell ↗</a>. Second cycle: <a href="https://explorer.testnet.chain.robinhood.com/tx/0x832bbf505ed31a3ada31b2d45e7e0c23a5db69f7d71aea9867efb1040791aa9c" target="_blank" rel="noopener">buy ↗</a> / <a href="https://explorer.testnet.chain.robinhood.com/tx/0x538a71fade7bca1a6c835df1a9c3ba2ebe2aac7d74ae9033a8b9819418d95ddd" target="_blank" rel="noopener">sell ↗</a>. Two v4 gotchas fixed along the way: the docs-listed Quoter isn't a Quoter on this testnet (manual StateView quote instead), and the router reverts on empty hookData (swaps encode <code>0x00</code>).</p>
+      <p class="card-links"><a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">Repo ↗</a> <a href="#volumes">Daily volumes ↓</a></p>
+    </div>
+  </section>
+
+  <!-- VOLUMES -->
+  <section id="volumes">
+    <p class="eyebrow">{daily volumes}</p>
+    <h2>Daily volumes</h2>
+    <p class="section-intro">Buy-then-sell-back rounds against the own SimpleAMM pools — one round = 1 buy + 1 sell (2 txs). First run, Nov 16, 2026. As of 18:49 GMT+7 — Arc, Robinhood and LitVM are complete; Velana is still running.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="vol-table">
+          <thead>
+            <tr><th>Chain</th><th>Rounds</th><th>Transactions</th><th>Bought</th><th>Sold</th><th>Gas spent</th><th>Status</th><th>Tx links</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Arc</td><td>1,000 / 1,000</td><td>2,000</td><td>100.0 USDC</td><td>99.405931 USDC</td><td>4.253 USDC</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.arc.io/tx/0xc9ad165f28491f4bed2e22044d63e9b29b352e6a8c79eb6e8f183210745a56eb" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.arc.io/tx/0x7b118c50eb8b3132b80192212df0575a9558ee5e66c6f1e7a94897e8c6f833d2" target="_blank" rel="noopener">Last ↗</a></td></tr>
+            <tr><td>Robinhood</td><td>1,000 / 1,000</td><td>2,002</td><td>0.1001 ETH</td><td>0.0995441 ETH</td><td>0.001156 ETH</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.chain.robinhood.com/tx/0xf9276b50c9bdb40ae84262d7b0364272093c23bb17f67719f066a8d9e0c735d5" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.chain.robinhood.com/tx/0x143cfd95553953fa70771ac9a5720858a72af4ae768c3355551982b1e96b7f0c" target="_blank" rel="noopener">Last ↗</a></td></tr>
+            <tr><td>LitVM</td><td>1,000 / 1,000</td><td>2,005</td><td>0.1001 zkLTC</td><td>0.099669 zkLTC</td><td>0.0011619 zkLTC</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.liteforge.zeeve.net/tx/0x174263fc3bc07320211f8a45f9b408c2d847bbced0a644a50e0f927c3acbeffb" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.liteforge.zeeve.net/tx/0xe1eb3cb4d7466fa22b7fa1307add70efe96811ddbc27b7de228db95c55dd9c0a" target="_blank" rel="noopener">Last ↗</a></td></tr>
+            <tr><td>Velana</td><td>522 / 819</td><td>1,045</td><td>0.0523 VELA</td><td>0.0519105 VELA</td><td>~0.00000000042 VELA</td><td><span class="badge progress">In progress</span></td><td><a href="https://velanachain.com/explorer/#/tx/0xa4d49976136164dfd8277358c531f581529fdb8d9f61d13e4c5aff4f3805f070" target="_blank" rel="noopener">First ↗</a> <a href="https://velanachain.com/explorer/#/tx/0x95ec7b49d68bc75c2f8d52310389383bf0966e467bd365736b70e21585c2fd9b" target="_blank" rel="noopener">Last ↗</a></td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>3,522 / 3,819</strong></td><td><strong>7,052</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Velana stalled at 18:34 GMT+7 when its RPC returned 502 Bad Gateway mid-round — the run is being resumed and this table updates when it lands. From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7 (800 txs/day across 4 chains).</p>
+      <p class="card-links"><a href="https://github.com/0xspotonchain/deco-sniper/blob/main/VOLUMES.md" target="_blank" rel="noopener">Full volumes record ↗</a></p>
     </div>
   </section>
 
@@ -178,7 +327,7 @@
     <p class="section-intro">Two wallets run everything on this page. The Circle wallet is USDC on Arc only; the burner is the multichain workhorse — one BIP39 seed, one address per chain. Public addresses only; never a seed or a private key.</p>
     <div class="card">
       <h3>Circle Agent Wallet</h3>
-      <p class="muted">Arc testnet · USDC only · daily claims at 09:11 WIB</p>
+      <p class="muted">Arc testnet · USDC only · daily claims at 09:11 GMT+7</p>
       <p class="label">Address</p>
       <p class="addr-row">
         <a class="addr" href="https://explorer.testnet.arc.io/address/0xc7d81269debced5e62069a4d42950965853aa300" target="_blank" rel="noopener">0xc7d81269debced5e62069a4d42950965853aa300</a>
@@ -230,8 +379,13 @@
       </div>
       <div class="card">
         <h3>Multichain burner wallet</h3>
-        <p>Generator + offline decryptor: one BIP39 seed for BTC, EVM, Solana and TRON. 8/8 tests passed before it touched a faucet. MIT licensed — fork it and build your own.</p>
-        <p class="card-links"><a href="wallet.html">How it was built →</a> <a href="decryptor.html">Decryptor →</a> <a href="https://github.com/0xspotonchain/deco-wallet" target="_blank" rel="noopener">Repo ↗</a></p>
+        <p>Generator + offline decryptor: one BIP39 seed for BTC, EVM, Solana and TRON. 8/8 tests passed before it touched a faucet. MIT licensed — fork it and build your own. Also on GitHub Packages: <code>npm install @0xspotonchain/deco-wallet@1.0.0</code>.</p>
+        <p class="card-links"><a href="wallet.html">How it was built →</a> <a href="decryptor.html">Decryptor →</a> <a href="https://github.com/0xspotonchain/deco-wallet" target="_blank" rel="noopener">Repo ↗</a> <a href="https://github.com/0xspotonchain/deco-wallet/pkgs/npm/deco-wallet" target="_blank" rel="noopener">npm package ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Velana store + site</h3>
+        <p>Free store and website on the Velana builder — test content only, Vel Pay wallet set to the burner address. The store + site flipped the builder points tasks and took the burner to rank #1 on the Velana Testnet Points leaderboard.</p>
+        <p class="card-links"><a href="https://velanachain.com/builder/s/decoteststore" target="_blank" rel="noopener">DECO Test Store ↗</a> <a href="https://velanachain.com/builder/s/deco" target="_blank" rel="noopener">DECO site ↗</a></p>
       </div>
       <div class="card">
         <h3>Circle Arc claim scripts</h3>
@@ -250,7 +404,7 @@
       </div>
       <div class="card">
         <h3>DECO tokens &amp; sniper</h3>
-        <p>The token contracts, deploy scripts and the sniper bot — see the Tokens, NFT and Sniper sections above.</p>
+        <p>The token contracts, deploy scripts and the sniper bot — see the Tokens, NFT, Pools, Names, Sniper and Volumes sections above.</p>
         <p class="card-links"><a href="https://github.com/0xspotonchain" target="_blank" rel="noopener">All repos ↗</a></p>
       </div>
       <div class="card">
@@ -270,28 +424,35 @@
   <section id="chains">
     <p class="eyebrow">{chains}</p>
     <h2>Chains</h2>
-    <p class="section-intro">Where DECO is live today — three testnets with deploys, five more with faucet balances only, and mainnets not yet.</p>
+    <p class="section-intro">Where DECO is live today — four testnets with deploys, four more with faucet balances only, and mainnets not yet.</p>
     <div class="grid">
       <div class="card">
         <h3>Arc Testnet</h3>
         <p><span class="badge live">Live</span></p>
         <p>Chain ID 5042002</p>
-        <p class="muted">DECO + DNFT deployed. Circle wallet claims USDC here daily.</p>
+        <p class="muted">DECO + DNFT + DM deployed. SimpleAMM pool + name service live. Circle wallet claims USDC here daily.</p>
         <p><a href="https://explorer.testnet.arc.io" target="_blank" rel="noopener">Explorer ↗</a></p>
       </div>
       <div class="card">
         <h3>Robinhood Chain Testnet</h3>
         <p><span class="badge live">Live</span></p>
         <p>Chain ID 46630</p>
-        <p class="muted">DECO + DNFT deployed. Uniswap v4 stack live here.</p>
+        <p class="muted">DECO + DNFT deployed. SimpleAMM pool + name service live, plus a real Uniswap v4 DECO/ETH pool.</p>
         <p><a href="https://explorer.testnet.chain.robinhood.com" target="_blank" rel="noopener">Explorer ↗</a></p>
       </div>
       <div class="card">
         <h3>LitVM LiteForge</h3>
         <p><span class="badge live">Live</span></p>
         <p>Chain ID 4441 · Litecoin's EVM zk L2</p>
-        <p class="muted">DECO + DNFT deployed. Community V2 fork with 852 pairs.</p>
+        <p class="muted">DECO + DNFT deployed. SimpleAMM pool + name service live. Community V2 fork with 852 pairs.</p>
         <p><a href="https://explorer.testnet.liteforge.zeeve.net" target="_blank" rel="noopener">Explorer ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Velana Testnet</h3>
+        <p><span class="badge live">Live</span></p>
+        <p>Chain ID 484148</p>
+        <p class="muted">DECO + DNFT deployed. SimpleAMM pool + name service live. VELA World plot #0 claimed; store + site on the builder.</p>
+        <p><a href="https://velanachain.com/explorer/" target="_blank" rel="noopener">Explorer ↗</a></p>
       </div>
     </div>
     <h3 class="subhead">Faucet balances only</h3>
@@ -300,7 +461,6 @@
       <li><strong>Base Sepolia</strong> <span class="muted">· chain 84532 · test USDC + EURC</span></li>
       <li><strong>Arbitrum Sepolia</strong> <span class="muted">· chain 421614 · test USDC</span></li>
       <li><strong>OP Sepolia</strong> <span class="muted">· chain 11155420 · test USDC</span></li>
-      <li><strong>Velana Testnet</strong> <span class="muted">· chain 484148 · 10 test VELA</span></li>
     </ul>
     <h3 class="subhead">Mainnets</h3>
     <p><span class="badge soon">Not yet</span> <span class="muted">No mainnet deploys. Mainnet work needs deco's explicit go-ahead, every time.</span></p>
@@ -318,6 +478,9 @@
       <li><a href="https://github.com/0xspotonchain/deco-circle-wallet" target="_blank" rel="noopener">deco-circle-wallet ↗</a></li>
       <li><a href="https://github.com/0xspotonchain/token-launch-radar" target="_blank" rel="noopener">token-launch-radar ↗</a></li>
       <li><a href="https://raw.githubusercontent.com/0xspotonchain/deco-tokens/main/tokenlist.json" target="_blank" rel="noopener">DECO token list ↗</a></li>
+      <li><a href="https://github.com/0xspotonchain/deco-wallet/pkgs/npm/deco-wallet" target="_blank" rel="noopener">@0xspotonchain/deco-wallet on npm ↗</a> <span class="muted">— the burner wallet generator as a package: <code>npm install @0xspotonchain/deco-wallet@1.0.0</code></span></li>
+      <li><a href="https://velanachain.com/builder/s/decoteststore" target="_blank" rel="noopener">DECO Test Store on Velana ↗</a></li>
+      <li><a href="https://velanachain.com/builder/s/deco" target="_blank" rel="noopener">DECO site on Velana ↗</a></li>
       <li><a href="https://chainlist.org/" target="_blank" rel="noopener">chainlist.org ↗</a> <span class="muted">— EVM chain directory; source of the chain configs behind the wallet, sniper and dashboard</span></li>
       <li><a href="https://t.me/s/airdropfind" target="_blank" rel="noopener">@airdropfind ↗</a> <span class="muted">— Telegram channel; source of many leads here, every item verified first</span></li>
       <li><a href="https://0xzunid.github.io/0xzunid.muse.ai/" target="_blank" rel="noopener">0xzunid.muse ↗</a> <span class="muted">— our friend <a href="https://github.com/0xzunid" target="_blank" rel="noopener">0xzunid</a>; the pools, name service and volume sniper are modeled on his approach</span></li>
