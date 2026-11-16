@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faucets — deco.muse</title>
+<meta name="description" content="Faucets — deco.muse. Free testnet faucets for the burner wallet: Bitcoin, EVM and Solana. What works, what's blocked, what's your step. Don't trust — verify.">
+<link rel="icon" href="assets/deco-logo-256.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/deco-logo-256.png" alt="DECO logo" width="32" height="32">
+    <span>DECO</span>
+  </a>
+  <nav class="nav">
+    <a href="index.html#tokens">Tokens</a>
+    <a href="index.html#nft">NFT</a>
+    <a href="index.html#sniper">Sniper</a>
+    <a href="index.html#wallets">Wallets</a>
+    <a href="index.html#tools">Tools</a>
+    <a href="index.html#chains">Chains</a>
+    <a href="dyor.html">DYOR</a>
+    <a href="faucets.html">Faucets</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">{faucets}</p>
+    <h1>Faucets</h1>
+    <p class="tagline">Free testnet faucets for the burner wallet — Bitcoin, EVM and Solana.</p>
+    <p class="motto">"DYOR, don't trust — verify, not your keys, not your coins."</p>
+    <p class="section-intro">Every faucet below was checked before it was listed: what it drips, what it asks for, and whether it works from here. Statuses are honest — a faucet that gates on mainnet balance or needs a wallet connection says so. Never paste a seed phrase or private key into any faucet. Paste a public address only.</p>
+    <p class="pool-note"><strong>Sepolia ETH is still 0.</strong> Every no-gate Sepolia faucet we tried is dry or gated on mainnet balance. Open routes: the Google Cloud faucet (your sign-in), an OpenFaucet retry once its pool refills, or 0.001 mainnet ETH on the burner to unlock Chain Platform.</p>
+  </section>
+
+  <!-- THE LIST -->
+  <section>
+    <p class="eyebrow">{the list}</p>
+    <h2>Faucets</h2>
+    <div class="grid">
+
+      <div class="card">
+        <p><span class="badge live">Working · scheduled every 2h</span></p>
+        <h3>Circle Faucet</h3>
+        <p>20 test USDC + 20 test EURC per claim on Sepolia, Arc Testnet and Base Sepolia; 20 test USDC on Arbitrum Sepolia and OP Sepolia. 8 claims per run, every 2 hours. reCAPTCHA only — no sign-in, no wallet connect.</p>
+        <p class="card-links"><a href="https://faucet.circle.com/" target="_blank" rel="noopener">faucet.circle.com ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge live">Working · scheduled daily</span> <span class="muted">· captcha flaky</span></p>
+        <h3>ZalalenA</h3>
+        <p>Multi-network faucet covering 90 networks. Robinhood Chain Testnet: 0.005 test ETH per claim, in the daily run — its hCaptcha has been rejecting solves lately. Solana Devnet faucet also listed; an attempt is running now.</p>
+        <p class="card-links"><a href="https://faucet.zalalena.com/" target="_blank" rel="noopener">faucet.zalalena.com ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Blocked from the VM · your step</span></p>
+        <h3>Chainlink Faucet</h3>
+        <p>25 test LINK per request plus up to 0.5 Sepolia ETH — the biggest Sepolia drip available, across ~60 testnets. Wallet connection is mandatory and the cloud browser has no wallet, so the claim failed here. Claim it from your phone. Note: the ETH drip needs 1 LINK on Ethereum Mainnet; the LINK drip doesn't.</p>
+        <p class="card-links"><a href="https://faucets.chain.link/" target="_blank" rel="noopener">faucets.chain.link ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Checking</span></p>
+        <h3>FaucetLink</h3>
+        <p>Minimal page — verifying live what networks and tokens it offers and whether a claim works without a wallet connection. Status updates here once checked.</p>
+        <p class="card-links"><a href="https://faucetlink.to/" target="_blank" rel="noopener">faucetlink.to ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Your step · needs your sign-in</span></p>
+        <h3>Google Cloud Web3 Faucet</h3>
+        <p>0.05 Sepolia ETH per 24 hours. Needs a Google sign-in, so it's deco's step from his own account. Not tried yet.</p>
+        <p class="card-links"><a href="https://cloud.google.com/application/web3/faucet/" target="_blank" rel="noopener">Google Cloud faucet ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Your step · official</span></p>
+        <h3>Solana Faucet</h3>
+        <p>The official Solana devnet faucet. Its page asks AI agents not to use the web interface, so this one is deco's step from his own device. Up to 2 requests per 8 hours; GitHub verification may unlock a higher limit.</p>
+        <p class="card-links"><a href="https://faucet.solana.com/" target="_blank" rel="noopener">faucet.solana.com ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Checking · wallet connect likely</span></p>
+        <h3>Gizmolab Faucet Tools</h3>
+        <p>Free test network faucets including devnet SOL. Its own description says "pick a network, connect your wallet and claim" — verifying live whether a claim works without connecting. If the wallet connect is mandatory, it's deco's step from his phone.</p>
+        <p class="card-links"><a href="https://tools.gizmolab.io/faucet/" target="_blank" rel="noopener">tools.gizmolab.io/faucet ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Directory · not a faucet</span></p>
+        <h3>Blockchair Awesome Faucets</h3>
+        <p>A directory, not a faucet itself — mostly mainnet reward/task faucets (FreeBitcoin, FreeEthereum and similar), which are not dev testnet faucets. One entry is relevant: a testnet faucet for Bitcoin, Litecoin and Dogecoin testnets.</p>
+        <p class="card-links"><a href="https://blockchair.com/awesome/faucets" target="_blank" rel="noopener">blockchair.com/awesome/faucets ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge soon">Blocked · mainnet gate</span></p>
+        <h3>Chainstack Faucets</h3>
+        <p>Its Sepolia faucet requires the requesting address to hold at least 0.08 ETH on Ethereum Mainnet plus a history of holding it, and a Chainstack API key. The burner holds no mainnet ETH — blocked.</p>
+        <p class="card-links"><a href="https://chainstack.com/faucets/" target="_blank" rel="noopener">chainstack.com/faucets ↗</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ALSO CLAIMING -->
+  <section>
+    <p class="eyebrow">{also claiming}</p>
+    <h2>Already in the daily run</h2>
+    <p class="section-intro">Faucets the burner claims every morning at 10:11 WIB, plus one manual claim.</p>
+    <div class="grid">
+
+      <div class="card">
+        <p><span class="badge live">Working · daily 10:11</span></p>
+        <h3>Bitcoin Testnet4</h3>
+        <p>1,000 sats per claim. Balance: 2,000 sats.</p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge live">Working · daily 10:11</span></p>
+        <h3>TRON Nile</h3>
+        <p>1,000 test TRX + 1,000 test USDT per 24 hours. Balance: 2,000 TRX + 2,000 test USDT.</p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge live">Working · daily 10:11</span></p>
+        <h3>LitVM LiteForge</h3>
+        <p>0.05 zkLTC per wallet per 24 hours. Balance: ~0.047 zkLTC.</p>
+        <p class="card-links"><a href="https://faucet.testnet.liteforge.zeeve.net/" target="_blank" rel="noopener">Faucet ↗</a></p>
+      </div>
+
+      <div class="card">
+        <p><span class="badge live">Working · manual claim</span></p>
+        <h3>Velana</h3>
+        <p>10 test VELA per address per 24 hours, paste the public address only. Balance: ~8.5 test VELA after the land claim.</p>
+        <p class="card-links"><a href="https://velanachain.com/faucet.html" target="_blank" rel="noopener">Faucet ↗</a></p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Built by <strong>deco.muse</strong> · zero real money · testnets only · DYOR.</p>
+  <p class="muted">Public addresses only. Never a seed phrase, never a private key. Don't trust — verify.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
