@@ -46,7 +46,7 @@
       <div class="stat"><strong>2</strong><span>ERC-20 tokens · DECO + DM</span></div>
       <div class="stat"><strong>1</strong><span>NFT collection · DNFT #1</span></div>
       <div class="stat"><strong>5</strong><span>pools live · 4 SimpleAMM + 1 Uniswap v4</span></div>
-      <div class="stat"><strong>7,052</strong><span>volume txs · Nov 16 first run</span></div>
+      <div class="stat"><strong>8,007</strong><span>volume txs · Nov 16 first run</span></div>
       <div class="stat"><strong>2</strong><span>wallets</span></div>
       <div class="stat"><strong>5</strong><span>project repos on GitHub</span></div>
     </div>
@@ -209,14 +209,14 @@
         <p><span class="badge live">Live</span> <span class="muted">SimpleAMM · chain 484148</span></p>
         <dl class="facts">
           <div><dt>Seed</dt><dd>10,000 DECO + 0.001 VELA</dd></div>
-          <div><dt>Reserves now</dt><dd>10,000 DECO / 0.0013924 VELA</dd></div>
+          <div><dt>Reserves now</dt><dd>10,000 DECO / 0.0015586 VELA</dd></div>
         </dl>
         <p class="label">Pool</p>
         <p class="addr-row">
           <a class="addr" href="https://velanachain.com/explorer/#/address/0xa81056EF621c952B5Fc033D7db159a0Da4ED5163" target="_blank" rel="noopener">0xa81056EF621c952B5Fc033D7db159a0Da4ED5163</a>
           <button class="copy" data-copy="0xa81056EF621c952B5Fc033D7db159a0Da4ED5163" type="button">Copy</button>
         </p>
-        <p class="card-links"><a href="https://velanachain.com/explorer/#/tx/0xa4d49976136164dfd8277358c531f581529fdb8d9f61d13e4c5aff4f3805f070" target="_blank" rel="noopener">First volume tx ↗</a> <a href="https://velanachain.com/explorer/#/tx/0x95ec7b49d68bc75c2f8d52310389383bf0966e467bd365736b70e21585c2fd9b" target="_blank" rel="noopener">Last volume tx ↗</a></p>
+        <p class="card-links"><a href="https://velanachain.com/explorer/#/tx/0xe9ab414ad7ed8f7f73b2275fe29650d7bf29986630618b95a7b9f8aaa0243405" target="_blank" rel="noopener">First volume tx ↗</a> <a href="https://velanachain.com/explorer/#/tx/0xb5375c0a37a26ebf538c701de4ab73cf2b23afc06bee9080478510473959c3bb" target="_blank" rel="noopener">Last volume tx ↗</a></p>
       </div>
       <div class="card">
         <h3>Robinhood · DECO / ETH <span class="muted">Uniswap v4</span></h3>
@@ -290,7 +290,7 @@
         <div><dt>Guard</dt><dd>Testnet-only, hard-coded</dd></div>
       </dl>
       <p>Pair watcher (polling — public RPCs expose no mempool), target-token mode for DECO, TP / SL / time exits, and spend caps per trade and per run. Live trading needs <code>LIVE.enabled</code> plus <code>--live</code>; either one alone keeps it in dry-run.</p>
-      <p class="status-live"><strong>Status: LIVE — volume mode running.</strong> First run complete on 3 chains: 1,000/1,000 rounds each on Arc, Robinhood and LitVM (6,007 txs). Velana is at 522/819 rounds and still running. From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7.</p>
+      <p class="status-live"><strong>Status: LIVE — first run complete on all 4 chains.</strong> 1,000/1,000 rounds each on Arc, Robinhood, LitVM and Velana — 4,000 rounds, 8,007 txs, all verified on-chain. From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7.</p>
       <p class="pool-note"><strong>Uniswap v4: traded live.</strong> The position-mode sniper did 2 full buy→sell cycles on the real Robinhood v4 DECO/ETH pool (4 txs confirmed, total net cost 0.0000125 ETH, burner DECO exactly unchanged). First cycle: <a href="https://explorer.testnet.chain.robinhood.com/tx/0xbb654db544b24de3b10d8ff945ce3332c6d59fdf3925b3be9d4ffb1b464b55ab" target="_blank" rel="noopener">buy ↗</a> / <a href="https://explorer.testnet.chain.robinhood.com/tx/0x0ca08b1c3670c3dc3dd9fec3c572f4fc7cd5d97e1c89acb7d07550570dca1d5f" target="_blank" rel="noopener">sell ↗</a>. Second cycle: <a href="https://explorer.testnet.chain.robinhood.com/tx/0x832bbf505ed31a3ada31b2d45e7e0c23a5db69f7d71aea9867efb1040791aa9c" target="_blank" rel="noopener">buy ↗</a> / <a href="https://explorer.testnet.chain.robinhood.com/tx/0x538a71fade7bca1a6c835df1a9c3ba2ebe2aac7d74ae9033a8b9819418d95ddd" target="_blank" rel="noopener">sell ↗</a>. Two v4 gotchas fixed along the way: the docs-listed Quoter isn't a Quoter on this testnet (manual StateView quote instead), and the router reverts on empty hookData (swaps encode <code>0x00</code>).</p>
       <p class="card-links"><a href="https://github.com/0xspotonchain/deco-sniper" target="_blank" rel="noopener">Repo ↗</a> <a href="#volumes">Daily volumes ↓</a></p>
     </div>
@@ -300,7 +300,7 @@
   <section id="volumes">
     <p class="eyebrow">{daily volumes}</p>
     <h2>Daily volumes</h2>
-    <p class="section-intro">Buy-then-sell-back rounds against the own SimpleAMM pools — one round = 1 buy + 1 sell (2 txs). First run, Nov 16, 2026. As of 18:49 GMT+7 — Arc, Robinhood and LitVM are complete; Velana is still running.</p>
+    <p class="section-intro">Buy-then-sell-back rounds against the own SimpleAMM pools — one round = 1 buy + 1 sell (2 txs). First run, Nov 16, 2026. As of 19:55 GMT+7 — all four chains complete: 4,000 rounds, 8,007 txs.</p>
     <div class="card">
       <div class="table-wrap">
         <table class="vol-table">
@@ -311,12 +311,12 @@
             <tr><td>Arc</td><td>1,000 / 1,000</td><td>2,000</td><td>100.0 USDC</td><td>99.405931 USDC</td><td>4.253 USDC</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.arc.io/tx/0xc9ad165f28491f4bed2e22044d63e9b29b352e6a8c79eb6e8f183210745a56eb" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.arc.io/tx/0x7b118c50eb8b3132b80192212df0575a9558ee5e66c6f1e7a94897e8c6f833d2" target="_blank" rel="noopener">Last ↗</a></td></tr>
             <tr><td>Robinhood</td><td>1,000 / 1,000</td><td>2,002</td><td>0.1001 ETH</td><td>0.0995441 ETH</td><td>0.001156 ETH</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.chain.robinhood.com/tx/0xf9276b50c9bdb40ae84262d7b0364272093c23bb17f67719f066a8d9e0c735d5" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.chain.robinhood.com/tx/0x143cfd95553953fa70771ac9a5720858a72af4ae768c3355551982b1e96b7f0c" target="_blank" rel="noopener">Last ↗</a></td></tr>
             <tr><td>LitVM</td><td>1,000 / 1,000</td><td>2,005</td><td>0.1001 zkLTC</td><td>0.099669 zkLTC</td><td>0.0011619 zkLTC</td><td><span class="badge live">Complete</span></td><td><a href="https://explorer.testnet.liteforge.zeeve.net/tx/0x174263fc3bc07320211f8a45f9b408c2d847bbced0a644a50e0f927c3acbeffb" target="_blank" rel="noopener">First ↗</a> <a href="https://explorer.testnet.liteforge.zeeve.net/tx/0xe1eb3cb4d7466fa22b7fa1307add70efe96811ddbc27b7de228db95c55dd9c0a" target="_blank" rel="noopener">Last ↗</a></td></tr>
-            <tr><td>Velana</td><td>522 / 819</td><td>1,045</td><td>0.0523 VELA</td><td>0.0519105 VELA</td><td>~0.00000000042 VELA</td><td><span class="badge progress">In progress</span></td><td><a href="https://velanachain.com/explorer/#/tx/0xa4d49976136164dfd8277358c531f581529fdb8d9f61d13e4c5aff4f3805f070" target="_blank" rel="noopener">First ↗</a> <a href="https://velanachain.com/explorer/#/tx/0x95ec7b49d68bc75c2f8d52310389383bf0966e467bd365736b70e21585c2fd9b" target="_blank" rel="noopener">Last ↗</a></td></tr>
-            <tr><td><strong>Total</strong></td><td><strong>3,522 / 3,819</strong></td><td><strong>7,052</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>Velana</td><td>1,000 / 1,000</td><td>2,000</td><td>0.1 VELA</td><td>0.0994447 VELA</td><td>~0.00000000081 VELA</td><td><span class="badge live">Complete</span></td><td><a href="https://velanachain.com/explorer/#/tx/0xe9ab414ad7ed8f7f73b2275fe29650d7bf29986630618b95a7b9f8aaa0243405" target="_blank" rel="noopener">First ↗</a> <a href="https://velanachain.com/explorer/#/tx/0xb5375c0a37a26ebf538c701de4ab73cf2b23afc06bee9080478510473959c3bb" target="_blank" rel="noopener">Last ↗</a></td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>4,000 / 4,000</strong></td><td><strong>8,007</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="muted">Velana stalled at 18:34 GMT+7 when its RPC returned 502 Bad Gateway mid-round — the run is being resumed and this table updates when it lands. From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7 (800 txs/day across 4 chains).</p>
+      <p class="muted">Velana ran in 4 parts (181 + 490 + 33 + 296) across 2 VM reboots and 1 RPC-502 crash — every interruption reconciled exactly on-chain, 0 failed rounds. From Tue Nov 17 the sniper runs 100 rounds/chain/day at 11:11 GMT+7 (800 txs/day across 4 chains).</p>
       <p class="card-links"><a href="https://github.com/0xspotonchain/deco-sniper/blob/main/VOLUMES.md" target="_blank" rel="noopener">Full volumes record ↗</a></p>
     </div>
   </section>
@@ -385,7 +385,7 @@
       </div>
       <div class="card">
         <h3>Velana store + site</h3>
-        <p>Free store and website on the Velana builder — test content only, Vel Pay wallet set to the burner address. The store + site flipped the builder points tasks and took the burner to rank #1 on the Velana Testnet Points leaderboard.</p>
+        <p>Free store and website on the Velana builder — test content only, Vel Pay wallet set to the burner address. The store + site flipped two points tasks; the full sweep reached <strong>250 points, rank #1 of 23</strong> on the Testnet Points leaderboard (9/10 tasks — DM token launched, plot 2722 bought, Luxury Kiosk built on plot #0, Vel Pay paid).</p>
         <p class="card-links"><a href="https://velanachain.com/builder/s/decoteststore" target="_blank" rel="noopener">DECO Test Store ↗</a> <a href="https://velanachain.com/builder/s/deco" target="_blank" rel="noopener">DECO site ↗</a></p>
       </div>
       <div class="card">
@@ -452,7 +452,7 @@
         <h3>Velana Testnet</h3>
         <p><span class="badge live">Live</span></p>
         <p>Chain ID 484148</p>
-        <p class="muted">DECO + DNFT deployed. SimpleAMM pool + name service live. VELA World plot #0 claimed; store + site on the builder.</p>
+        <p class="muted">DECO + DNFT deployed. SimpleAMM pool + name service live. 250 Testnet Points, rank #1 of 23: DM token launched, plot 2722 bought, Luxury Kiosk built on plot #0, Vel Pay paid. Plot 2722 listed for sale, plot #0 listed for rent.</p>
         <p><a href="https://velanachain.com/explorer/" target="_blank" rel="noopener">Explorer ↗</a></p>
       </div>
     </div>
