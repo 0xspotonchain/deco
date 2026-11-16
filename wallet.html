@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Burner wallet — DECO</title>
+<title>Burner wallet — deco.muse</title>
 <meta name="description" content="How deco's multichain burner wallet was built — one BIP39 seed, five chains, 8/8 tests, offline decryptor. MIT licensed, fork it and build your own.">
 <link rel="icon" href="assets/deco-logo-256.png">
 <link rel="stylesheet" href="styles.css">
@@ -27,17 +27,19 @@
 <main>
   <!-- HERO -->
   <section class="hero">
+    <p class="eyebrow">{built in the open}</p>
     <h1>Burner wallet</h1>
     <p class="tagline">One BIP39 seed, five chains — built in the open, MIT licensed. Fork it and build your own.</p>
     <p class="motto">"Not your keys, not your coins."</p>
     <div class="hero-links">
-      <a class="btn gold" href="https://github.com/0xspotonchain/deco-wallet" target="_blank" rel="noopener">Fork it on GitHub ↗</a>
+      <a class="btn primary" href="https://github.com/0xspotonchain/deco-wallet" target="_blank" rel="noopener">Fork it on GitHub ↗</a>
       <a class="btn" href="decryptor.html">Open the decryptor →</a>
     </div>
   </section>
 
   <!-- HOW IT WAS BUILT -->
   <section>
+    <p class="eyebrow">{the build}</p>
     <h2>How it was built</h2>
     <p class="section-intro">Seven steps, all in <code>generate.js</code> — run once, refuses to overwrite an existing wallet, prints only public addresses and test results. Never a seed, never a private key, never the passphrase.</p>
     <div class="card">
@@ -55,6 +57,7 @@
 
   <!-- PATHS -->
   <section>
+    <p class="eyebrow">{paths}</p>
     <h2>Derivation paths</h2>
     <div class="card">
       <dl class="facts">
@@ -70,6 +73,7 @@
 
   <!-- DECRYPTOR -->
   <section>
+    <p class="eyebrow">{decryptor}</p>
     <h2>Decryptor tools</h2>
     <p class="section-intro">Two offline ways to open the encrypted backup. Both run locally — no network code, nothing leaves your device.</p>
     <div class="grid">
@@ -89,6 +93,7 @@
 
   <!-- BUILD YOUR OWN -->
   <section>
+    <p class="eyebrow">{fork it}</p>
     <h2>Build your own</h2>
     <div class="card">
       <p><code>git clone https://github.com/0xspotonchain/deco-wallet.git</code> — <code>npm install</code> — <code>npm test</code> — <code>node generate.js</code>. Full steps in the repo README.</p>
@@ -98,7 +103,7 @@
 </main>
 
 <footer>
-  <p>Built by <strong>deco + Muse</strong> · zero real money · testnets only · DYOR.</p>
+  <p>Built by <strong>deco.muse</strong> · zero real money · testnets only · DYOR.</p>
   <p class="muted">Public addresses only. Never a seed phrase, never a private key. Don't trust — verify.</p>
 </footer>
 

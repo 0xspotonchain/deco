@@ -1,16 +1,27 @@
-/* DECO — dark theme, gold branding. No external fonts or CDNs. */
+/* DECO — Arc-inspired light theme. No external fonts or CDNs.
+   Palette sampled from arc.io (Nov 2026): white body, dark navy text,
+   sky-blue → peach hero gradient, amber accents, black primary CTAs,
+   mono brace labels. */
 :root {
-  --bg: #0a0a0f;
-  --bg-soft: #12121a;
-  --card: #14141f;
-  --border: #262633;
-  --gold: #f5c518;
-  --gold-dim: #c9a227;
-  --text: #e8e8ee;
-  --muted: #9a9aad;
-  --green: #3ecf6f;
-  --amber: #f5a623;
-  --radius: 14px;
+  --bg: #ffffff;
+  --bg-soft: #f5f7fa;
+  --panel: #e9eef4;
+  --card: #ffffff;
+  --border: #d4e0ec;
+  --navy: #1b3158;
+  --navy-soft: #2f578c;
+  --ink: #000000;
+  --orange: #e9a13f;
+  --orange-dark: #9a6a1a;
+  --sky: #acc6e9;
+  --sky-light: #e5f2fb;
+  --peach: #f6ece2;
+  --text: #1b3158;
+  --muted: #456998;
+  --green: #1a7a3c;
+  --green-bg: #e6f4ea;
+  --amber-bg: #fdf3e0;
+  --radius: 8px;
 }
 
 * { box-sizing: border-box; }
@@ -26,26 +37,27 @@ body {
   line-height: 1.6;
 }
 
-a { color: var(--gold); text-decoration: none; }
+a { color: var(--navy-soft); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  background: var(--bg-soft);
+  background: var(--panel);
   padding: 0.1em 0.35em;
   border-radius: 4px;
   font-size: 0.9em;
 }
 
-h1, h2, h3 { line-height: 1.25; margin-top: 0; }
-h2 { font-size: 1.6rem; margin-bottom: 0.4rem; }
-h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+h1, h2, h3 { line-height: 1.25; margin-top: 0; font-weight: 300; letter-spacing: -0.01em; }
+h2 { font-size: 1.9rem; margin-bottom: 0.4rem; }
+h3 { font-size: 1.15rem; margin-bottom: 0.4rem; font-weight: 400; }
 .muted { color: var(--muted); }
 .eyebrow {
-  color: var(--gold);
-  font-size: 0.85rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--orange);
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin: 0 0 0.5rem;
 }
@@ -61,21 +73,21 @@ h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
   justify-content: space-between;
   gap: 1rem;
   padding: 0.6rem 1rem;
-  background: rgba(10, 10, 15, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--border);
 }
 .brand {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text);
+  color: var(--navy);
   font-weight: 800;
   letter-spacing: 0.12em;
 }
 .brand img { border-radius: 8px; }
 .nav { display: flex; gap: 0.9rem; flex-wrap: wrap; }
-.nav a { color: var(--muted); font-size: 0.9rem; }
-.nav a:hover { color: var(--gold); }
+.nav a { color: var(--navy); font-size: 0.9rem; }
+.nav a:hover { color: var(--navy-soft); }
 
 /* Layout */
 main {
@@ -85,14 +97,24 @@ main {
 }
 section { margin-top: 3rem; }
 
-/* Hero */
-.hero { text-align: center; padding: 3rem 0 1rem; }
+/* Hero — sky blue to peach gradient with a faint dot grid, Arc style */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+  margin-top: 2rem;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle, rgba(27, 49, 88, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, #bfe5fe 0%, #ddeff9 45%, #f6ece2 100%);
+  background-size: 24px 24px, 100% 100%;
+}
 .hero-logo { border-radius: 24px; }
 .hero h1 {
   font-size: 3.2rem;
-  letter-spacing: 0.18em;
+  font-weight: 300;
+  letter-spacing: 0.08em;
   margin: 1rem 0 0.5rem;
-  color: var(--gold);
+  color: var(--navy);
 }
 .tagline { font-size: 1.15rem; max-width: 640px; margin: 0 auto; }
 .motto { color: var(--muted); font-style: italic; margin: 1rem auto 0; max-width: 640px; }
@@ -101,15 +123,16 @@ section { margin-top: 3rem; }
 .btn {
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: var(--text);
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  background: transparent;
   font-weight: 600;
   font-size: 0.95rem;
 }
-.btn:hover { text-decoration: none; border-color: var(--gold); }
-.btn.gold { background: var(--gold); border-color: var(--gold); color: #0a0a0f; }
-.btn.gold:hover { background: #ffd83d; }
+.btn:hover { text-decoration: none; border-color: var(--ink); color: var(--ink); }
+.btn.primary { background: var(--ink); border-color: var(--ink); color: #ffffff; }
+.btn.primary:hover { background: var(--navy); border-color: var(--navy); color: #ffffff; }
 
 .stats {
   display: grid;
@@ -124,10 +147,10 @@ section { margin-top: 3rem; }
   border-radius: var(--radius);
   padding: 1rem 0.75rem;
 }
-.stat strong { display: block; font-size: 1.9rem; color: var(--gold); line-height: 1.1; }
+.stat strong { display: block; font-size: 1.9rem; font-weight: 300; color: var(--navy); line-height: 1.1; }
 .stat span { color: var(--muted); font-size: 0.85rem; }
 
-/* Cards */
+/* Cards — flat, hairline borders, no shadow */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -136,7 +159,7 @@ section { margin-top: 3rem; }
   margin-top: 1rem;
 }
 .card h3 { margin-bottom: 0.25rem; }
-.article-card { border-color: var(--gold-dim); }
+.article-card { border-left: 3px solid var(--orange); }
 .grid { display: grid; gap: 1rem; }
 
 /* Facts table */
@@ -158,22 +181,22 @@ section { margin-top: 3rem; }
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.82rem;
   word-break: break-all;
-  color: var(--gold);
+  color: var(--navy-soft);
   flex: 1;
   min-width: 0;
 }
 .copy {
   flex-shrink: 0;
-  background: var(--bg-soft);
-  color: var(--text);
-  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--navy);
+  border: 1px solid var(--navy);
   border-radius: 8px;
   padding: 0.35rem 0.7rem;
   font-size: 0.85rem;
   cursor: pointer;
 }
-.copy:hover { border-color: var(--gold); }
-.copy.copied { background: var(--gold); color: #0a0a0f; border-color: var(--gold); }
+.copy:hover { border-color: var(--ink); color: var(--ink); }
+.copy.copied { background: var(--ink); color: #ffffff; border-color: var(--ink); }
 
 /* Token / NFT */
 .token-head { display: flex; gap: 1rem; align-items: center; }
@@ -181,17 +204,17 @@ section { margin-top: 3rem; }
 .chain-links { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.35rem; }
 .card-links { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0 0; }
 .pool-note {
-  background: var(--bg-soft);
+  background: var(--amber-bg);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--amber);
+  border-left: 3px solid var(--orange);
   border-radius: 8px;
   padding: 0.75rem 1rem;
   margin: 1rem 0 0;
 }
 .status-paused {
-  background: var(--bg-soft);
+  background: var(--amber-bg);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--amber);
+  border-left: 3px solid var(--orange);
   border-radius: 8px;
   padding: 0.75rem 1rem;
 }
@@ -212,8 +235,8 @@ section { margin-top: 3rem; }
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
 }
-.badge.live { background: rgba(62, 207, 111, 0.15); color: var(--green); border: 1px solid var(--green); }
-.badge.soon { background: rgba(245, 166, 35, 0.12); color: var(--amber); border: 1px solid var(--amber); }
+.badge.live { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
+.badge.soon { background: var(--amber-bg); color: var(--orange-dark); border: 1px solid var(--orange); }
 
 .subhead { margin-top: 2rem; }
 .chain-list { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
@@ -231,11 +254,11 @@ section { margin-top: 3rem; }
 .article h1 { font-size: 2rem; margin-bottom: 0.5rem; }
 .article .byline { color: var(--muted); margin-top: 0; }
 .article blockquote {
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--orange);
   margin: 1.5rem 0;
   padding: 0.25rem 1rem;
   font-style: italic;
-  color: var(--gold);
+  color: var(--navy);
 }
 .article table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
 .article th, .article td { text-align: left; padding: 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -243,14 +266,17 @@ section { margin-top: 3rem; }
 .article .hash { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8rem; word-break: break-all; }
 .back-link { display: inline-block; margin: 2rem 0 0; }
 
-/* Footer */
+/* Footer — peach gradient, Arc style */
 footer {
   border-top: 1px solid var(--border);
   padding: 2rem 1rem;
   text-align: center;
-  color: var(--muted);
+  color: var(--ink);
+  background: linear-gradient(180deg, #eedbc6 0%, #e7b07b 100%);
 }
 footer p { margin: 0.25rem 0; }
+footer .muted { color: #3a3a3a; }
+footer a { color: var(--ink); }
 
 /* Wider screens */
 @media (min-width: 640px) {
